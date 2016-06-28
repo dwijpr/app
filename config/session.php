@@ -57,7 +57,7 @@ return [
     |
     */
 
-    'files' => storage_path('framework/sessions'),
+    'files' => 'D:=/base/storage/framework/sessions',
 
     /*
     |--------------------------------------------------------------------------
