@@ -19,3 +19,9 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+
+Route::group([
+    'middleware' => 'auth',
+], function ($router) {
+    $router->resource('/item', 'ItemController');
+});

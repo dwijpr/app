@@ -6,7 +6,7 @@ return [
         'name' => 'base.dev'
     ],
 
-    'name' => 'App',
+    'name' => 'Piro',
 
     'dark' => true,
     /*
