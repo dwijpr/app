@@ -24,4 +24,5 @@ Route::group([
     'middleware' => 'auth',
 ], function ($router) {
     $router->resource('/item', 'ItemController');
+    $router->resource('/pay', 'PayController');
 });

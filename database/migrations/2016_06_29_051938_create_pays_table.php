@@ -17,6 +17,7 @@ class CreatePaysTable extends Migration
             $table->integer('user_id')->unsigned()->index();
             $table->integer('item_id')->unsigned()->index();
             $table->double('price', 13);
+            $table->timestamp('datetime');
             $table->timestamps();
         });
     }

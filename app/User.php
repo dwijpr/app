@@ -47,4 +47,8 @@ class User extends Authenticatable
         }
         return $this->hasRole($roles);
     }
+
+    public function pays() {
+        return $this->hasMany(Pay::class);
+    }
 }
