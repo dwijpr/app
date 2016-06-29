@@ -66,9 +66,11 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Item $item)
     {
-        //
+        return view('items.edit', [
+            'object' => $item,
+        ]);
     }
 
     /**
@@ -78,9 +80,15 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Item $item)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|max:255',
+        ]);
+        $item->update([
+            'name' => $request->name,
+        ]);
+        return redirect('/item');
     }
 
     /**

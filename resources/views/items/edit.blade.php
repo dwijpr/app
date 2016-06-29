@@ -5,9 +5,9 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="content">
-                <h1>Edit User</h1>
+                <h1>Edit Item</h1>
                 <hr>
-                @include('users.form')
+                @include('items.form')
             </div>
         </div>
     </div>
