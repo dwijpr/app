@@ -28,13 +28,13 @@
                             <td>{{ $o->datetime }}</td>
                             <td>
                                 <a
-                                    href="{{ url('user/'.$o->id.'/edit') }}"
+                                    href="{{ url('pay/'.$o->id.'/edit') }}"
                                     class="no"
                                 >
                                     <i class="fa fa-pencil"></i>
                                 </a>
                                 {{ Form::open([
-                                    'url' => 'user/'.$o->id,
+                                    'url' => 'pay/'.$o->id,
                                     'method' => 'DELETE',
                                     'style' => 'display: inline;'
                                 ]) }}

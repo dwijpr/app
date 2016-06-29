@@ -10,10 +10,15 @@
             'for' => 'item',
         ]) }}
         <div class="col-sm-6">
-            {{ Form::select('item', os_to_kvs($items, 'name'), null, [
-                'class' => 'form-control',
-                'id' => 'item',
-            ]) }}
+            {{ Form::select(
+                'item'
+                , os_to_kvs($items, 'name')
+                , @$object->item_id
+                , [
+                    'class' => 'form-control',
+                    'id' => 'item',
+                ]
+            ) }}
             @if($errors->has('item'))
                 <span class="help-block">
                     <strong>{{ $errors->first('item') }}</strong>

@@ -72,9 +72,13 @@ class PayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pay $pay)
     {
-        //
+        $items = Item::all();
+        return view('pays.edit', [
+            'object' => $pay,
+            'items' => $items,
+        ]);
     }
 
     /**
@@ -84,9 +88,18 @@ class PayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pay $pay)
     {
-        //
+        $this->validate($request, [
+            'price' => 'required|numeric|min:0',
+            'datetime' => 'required|date|date_format:Y-m-d h:i:s'
+        ]);
+        $pay->update([
+            'item_id' => $request->item,
+            'price' => $request->price,
+            'datetime' => $request->datetime,
+        ]);
+        return redirect('pay');
     }
 
     /**
