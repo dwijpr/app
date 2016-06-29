@@ -108,8 +108,9 @@ class PayController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pay $pay)
     {
-        //
+        $pay->delete();
+        return redirect('pay');
     }
 }

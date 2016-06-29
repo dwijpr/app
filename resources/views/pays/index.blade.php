@@ -22,8 +22,8 @@
                     @foreach($objects as $i => $o)
                         <tr>
                             <td>{{ $i+1 }}</td>
-                            <td>{{ $o->user->email }}</td>
-                            <td>{{ $o->item->name }}</td>
+                            <td>{{ @$o->user->email }}</td>
+                            <td>{{ @$o->item->name }}</td>
                             <td>{{ $o->price }}</td>
                             <td>{{ $o->datetime }}</td>
                             <td>
