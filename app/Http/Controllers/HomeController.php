@@ -7,13 +7,19 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function __construct() {
+        $this->user = request()->user();
+    }
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('home');
+        $pays = $this->user->pays;
+        return view('home', [
+            'pays' => $pays,
+        ]);
     }
 }
