@@ -1,5 +1,15 @@
 <?php
 
+if (!function_exists('os_to_a')) {
+    function os_to_a($os, $field) {
+        $array = [];
+        foreach ($os as $i => $o) {
+            $array[] = $o->$field;
+        }
+        return $array;
+    }
+}
+
 if (!function_exists('os_to_kvs')) {
     function os_to_kvs($os, $valName, $keyName = 'id') {
         $kvs = [];
