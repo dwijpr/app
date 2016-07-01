@@ -17,6 +17,9 @@
 {{ Html::script(
     '/thirdparty/typeahead.js/0.11.1/dist/typeahead.jquery.js'
 ) }}
+{{ Html::script(
+    '/thirdparty/Numeral-js/1.5.3/numeral.js'
+) }}
 @endsection
 
 @section('content')
@@ -33,7 +36,7 @@
                         <tr>
                             <td>{{ $p->datetime }}</td>
                             <td>{{ $p->item->name }}</td>
-                            <td>{{ $p->price }}</td>
+                            <td class="text-right">{{ $p->price }}</td>
                         </tr>
                     @endforeach
                     </tbody>
@@ -71,6 +74,23 @@ $('#the-basics .typeahead').typeahead({
 {
     name: 'items',
     source: substringMatcher(items)
+});
+
+function numeralFormat(el) {
+    var val = $(el).val();
+    $(el).val(numeral(val).format('0,0'));
+}
+$(".numeral").each(function() {
+    numeralFormat(this);
+});
+$(".numeral").keyup(function() {
+    numeralFormat(this);
+});
+$("#add-pay").submit(function() {
+    $(".numeral").each(function() {
+        var unformat = numeral().unformat($(this).val());
+        $(this).val(unformat);
+    });
 });
 </script>
 @endsection

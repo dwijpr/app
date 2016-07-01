@@ -2,9 +2,15 @@
     'url' => 'home',
     'class' => 'form-horizontal',
     'role' => 'form',
+    'id' => 'add-pay'
 ]) !!}
     <div class="form-group">
-        <div class="col-md-5{{ $errors->has('item')?' has-error':'' }}">
+        <div class="
+            col-md-5
+            col-md-offset-0
+            col-sm-6
+            col-sm-offset-3{{ $errors->has('item')?' has-error':'' }}"
+        >
             <div id="the-basics">
                 {{ Form::text('item', null, [
                     'class' => 'form-control typeahead',
@@ -17,11 +23,17 @@
                 @endif
             </div>
         </div>
-        <div class="col-md-2{{ $errors->has('price')?' has-error':'' }}">
+        <div class="
+            col-md-2
+            col-md-offset-0
+            col-sm-6
+            col-sm-offset-3{{ $errors->has('price')?' has-error':'' }}"
+        >
             <div>
                 {{ Form::text('price', null, [
-                    'class' => 'form-control text-right',
-                    'placeholder' => '1.000.000',
+                    'class' => 'form-control text-right numeral',
+                    'placeholder' => '0',
+                    'autocomplete' => 'off',
                 ]) }}
                 @if($errors->has('price'))
                     <span class="help-block">
@@ -30,11 +42,17 @@
                 @endif
             </div>
         </div>
-        <div class="col-md-3{{ $errors->has('datetime')?' has-error':'' }}">
+        <div class="
+            col-md-3
+            col-md-offset-0
+            col-sm-6
+            col-sm-offset-3{{ $errors->has('datetime')?' has-error':'' }}"
+        >
             <div>
                 {{ Form::text('datetime', date('Y-m-d h:i:s'), [
                     'class' => 'form-control text-center',
-                    'placeholder' => 'Paid Date & Time'
+                    'placeholder' => 'Paid Date & Time',
+                    'autocomplete' => 'off',
                 ]) }}
                 @if($errors->has('datetime'))
                     <span class="help-block">
@@ -43,7 +61,12 @@
                 @endif
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="
+            col-md-2
+            col-md-offset-0
+            col-sm-6
+            col-sm-offset-3"
+        >
             <button class="btn btn-primary" style="width: 100%;">
                 {{ 'Add' }}
             </button>
