@@ -41,8 +41,9 @@ class SeedDump extends Command
         $tables = DB::select('show tables');
         $this->info('tables list:');
         $items = [];
+        $db_name = config('database.connections.mysql.database');
         foreach ($tables as $i => $table) {
-            $name = $table->Tables_in_piro;
+            $name = $table->{'Tables_in_'.$db_name};
             $this->line("- ".$name);
             if ($name === 'migrations') {
                 $this->line('!! skipping migrations table');
@@ -51,7 +52,8 @@ class SeedDump extends Command
             }
         }
         $this->call('iseed', [
-            "tables" => implode(",", $items)
+            "tables" => implode(",", $items),
+            "--force" => true,
         ]);
     }
 }
