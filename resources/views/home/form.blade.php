@@ -29,11 +29,8 @@
     <div class="form-group">
         <div class="col-sm-6 col-sm-offset-4">
             <button class="btn btn-primary">
-                {{ @$object?'Update':'Create' }}
+                {{ 'Add' }}
             </button>
-            <a href="{{ url('pay') }}" class="btn btn-default">
-                Cancel
-            </a>
         </div>
     </div>
 {!! Form::close() !!}

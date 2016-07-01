@@ -27,11 +27,18 @@ class HomeController extends Controller
 
     public function store(Request $request) {
         $this->validate($request, [
+            'item' => 'required|max:255',
             'price' => 'required|numeric|min:0',
             'datetime' => 'required|date|date_format:Y-m-d h:i:s'
         ]);
+        $item = Item::where('name', $request->item)->first();
+        if (!$item) {
+            $item = Item::create([
+                'name' => $request->item,
+            ]);
+        }
         $pay = $request->user()->pays()->create([
-            'item_id' => $request->item,
+            'item_id' => $item->id,
             'price' => $request->price,
             'datetime' => $request->datetime,
         ]);

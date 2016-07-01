@@ -27,7 +27,17 @@
                 @include('home.form')
             </div>
             <div>
-                {{ dump($pays) }}
+                <table class="table">
+                    <tbody>
+                    @foreach($pays as $p)
+                        <tr>
+                            <td>{{ $p->datetime }}</td>
+                            <td>{{ $p->item->name }}</td>
+                            <td>{{ $p->price }}</td>
+                        </tr>
+                    @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
