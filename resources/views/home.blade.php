@@ -10,6 +10,15 @@
         padding: 8px;
         background: {{ config('dark')?'#333':'#ddd' }};
     }
+    .pay-item .pull-right {
+        display: none;
+    }
+    .pay-item:hover {
+        color: #000;
+    }
+    .pay-item:hover .pull-right {
+        display: block;
+    }
 </style>
 @endsection
 

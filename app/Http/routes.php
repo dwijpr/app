@@ -23,6 +23,14 @@ $router->post('/home', [
     'uses' => 'HomeController@store',
     'middleware' => 'auth',
 ]);
+$router->patch('/home/{pay}', [
+    'uses' => 'HomeController@update',
+    'middleware' => 'auth',
+]);
+$router->delete('/home/{pay}', [
+    'uses' => 'HomeController@destroy',
+    'middleware' => 'auth',
+]);
 
 Route::group([
     'middleware' => 'auth',

@@ -20,7 +20,7 @@ class HomeController extends Controller
     {
         $gpays = Pay::where('user_id', $request->user()->id)->select(
             'id', 'price', 'datetime','item_id'
-        )->get()->groupBy(function($pay) {
+        )->orderBy('order', 'asc')->get()->groupBy(function($pay) {
             $pay->item = Item::find($pay->item_id);
             $pay->datetime = Carbon::parse($pay->datetime);
             return $pay->datetime->format('Y-m-d');
@@ -35,7 +35,7 @@ class HomeController extends Controller
         $this->validate($request, [
             'item' => 'required|max:255',
             'price' => 'required|numeric|min:0',
-            'datetime' => 'required|date|date_format:Y-m-d h:i:s'
+            'datetime' => 'required|date|date_format:Y-m-d'
         ]);
         $item = Item::where('name', $request->item)->first();
         if (!$item) {
@@ -48,6 +48,40 @@ class HomeController extends Controller
             'price' => $request->price,
             'datetime' => $request->datetime,
         ]);
+        $order = $request->user()->pays()->where(
+            'datetime', $request->datetime
+        )->count();
+        $pay->order = $order;
+        $pay->save();
+        return redirect('home');
+    }
+
+    public function update(Request $request, Pay $pay) {
+        $pay->datetime = Carbon::parse($pay->datetime);
+        if ($request->up and $pay->order > 1) {
+            $payUp = $request->user()->pays()
+                ->where('datetime', $pay->datetime->format('Y-m-d'))
+                ->where('order', $pay->order-1)->first();
+            $pay->order--;
+            $payUp->order++;
+            $pay->save();
+            $payUp->save();
+        } elseif ($request->down and !(($request->user()->pays()->where(
+            'datetime', $pay->datetime->format('Y-m-d')
+        )->count())==$pay->order)) {
+            $payDown = $request->user()->pays()
+                ->where('datetime', $pay->datetime->format('Y-m-d'))
+                ->where('order', $pay->order+1)->first();
+            $pay->order++;
+            $payDown->order--;
+            $pay->save();
+            $payDown->save();
+        }
+        return redirect('home');
+    }
+
+    public function destroy(Request $request, Pay $pay) {
+        $pay->delete();
         return redirect('home');
     }
 }
