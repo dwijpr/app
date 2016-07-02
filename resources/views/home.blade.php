@@ -25,6 +25,13 @@
     .pay-item:hover .pull-right {
         display: block;
     }
+
+    form .form-control {
+        border-radius: 0;
+    }
+    form .btn {
+        border-radius: 0;
+    }
 </style>
 @endsection
 

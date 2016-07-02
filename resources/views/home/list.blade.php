@@ -10,6 +10,9 @@
                             {{ $gpays->get($key)[0]->datetime->format('S') }}
                         </sup>
                     </sup>
+                    <div class="pull-right">
+                        {{ $gpays->get($key)->total }}
+                    </div>
                 </h3>
                 @foreach($gpays->get($key) as $p)
                 <div class="pay-item">
