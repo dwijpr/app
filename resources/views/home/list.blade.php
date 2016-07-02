@@ -1,17 +1,17 @@
 <div class="row">
-    @foreach($gpays as $pays)
+    @foreach($gkeys as $key)
         <div class="col-md-4 col-sm-6">
             <div class="well">
                 <h3>
-                    {{ $pays[0]->datetime->format('l') }}
+                    {{ $gpays->get($key)[0]->datetime->format('l') }}
                     <sup>
-                        {{ $pays[0]->datetime->format('j') }}
+                        {{ $gpays->get($key)[0]->datetime->format('j') }}
                         <sup>
-                            {{ $pays[0]->datetime->format('S') }}
+                            {{ $gpays->get($key)[0]->datetime->format('S') }}
                         </sup>
                     </sup>
                 </h3>
-                @foreach($pays as $p)
+                @foreach($gpays->get($key) as $p)
                 <div class="pay-item">
                     {{ $p->item->name }}
                     ~

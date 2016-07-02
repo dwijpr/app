@@ -25,7 +25,10 @@ class HomeController extends Controller
             $pay->datetime = Carbon::parse($pay->datetime);
             return $pay->datetime->format('Y-m-d');
         });
+        $gkeys = $gpays->keys()->toArray();
+        rsort($gkeys);
         return view('home', [
+            'gkeys' => $gkeys,
             'gpays' => $gpays,
             'items' => Item::all(),
         ]);

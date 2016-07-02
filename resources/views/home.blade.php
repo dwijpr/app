@@ -10,6 +10,12 @@
         padding: 8px;
         background: {{ config('dark')?'#333':'#ddd' }};
     }
+    .tt-suggestion {
+        color: {{ config('dark')?'#ddd':'#333' }};
+    }
+    .tt-suggestion .tt-highlight{
+        color: {{ config('dark')?'#fff':'#111' }};
+    }
     .pay-item .pull-right {
         display: none;
     }

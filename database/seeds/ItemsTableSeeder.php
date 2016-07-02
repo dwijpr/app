@@ -129,6 +129,134 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-02 20:57:50',
                 'deleted_at' => NULL,
             ),
+            14 => 
+            array (
+                'id' => 15,
+                'name' => 'Laundry',
+                'created_at' => '2016-07-02 21:15:52',
+                'updated_at' => '2016-07-02 21:15:52',
+                'deleted_at' => NULL,
+            ),
+            15 => 
+            array (
+                'id' => 16,
+                'name' => 'Baso Siomay',
+                'created_at' => '2016-07-02 21:27:41',
+                'updated_at' => '2016-07-02 21:27:41',
+                'deleted_at' => NULL,
+            ),
+            16 => 
+            array (
+                'id' => 17,
+                'name' => 'Regal Marie 125gr',
+                'created_at' => '2016-07-02 21:28:43',
+                'updated_at' => '2016-07-02 21:28:43',
+                'deleted_at' => NULL,
+            ),
+            17 => 
+            array (
+                'id' => 18,
+                'name' => 'Bango Kecap Manis 135gr',
+                'created_at' => '2016-07-02 21:29:19',
+                'updated_at' => '2016-07-02 21:29:19',
+                'deleted_at' => NULL,
+            ),
+            18 => 
+            array (
+                'id' => 19,
+                'name' => 'Ayam Goreng - Usus, Original, Pedas',
+                'created_at' => '2016-07-02 21:33:00',
+                'updated_at' => '2016-07-02 21:33:00',
+                'deleted_at' => NULL,
+            ),
+            19 => 
+            array (
+                'id' => 20,
+                'name' => 'Indofood Sambal Extra Hot 140gr',
+                'created_at' => '2016-07-02 21:34:03',
+                'updated_at' => '2016-07-02 21:34:03',
+                'deleted_at' => NULL,
+            ),
+            20 => 
+            array (
+                'id' => 21,
+                'name' => 'Baso Batagor',
+                'created_at' => '2016-07-02 21:35:05',
+                'updated_at' => '2016-07-02 21:35:05',
+                'deleted_at' => NULL,
+            ),
+            21 => 
+            array (
+                'id' => 22,
+                'name' => 'Indocafe Coffemix Pack 5',
+                'created_at' => '2016-07-02 21:35:40',
+                'updated_at' => '2016-07-02 21:35:40',
+                'deleted_at' => NULL,
+            ),
+            22 => 
+            array (
+                'id' => 23,
+                'name' => 'Mie Sedaap Cup Goreng',
+                'created_at' => '2016-07-02 21:36:38',
+                'updated_at' => '2016-07-02 21:36:38',
+                'deleted_at' => NULL,
+            ),
+            23 => 
+            array (
+                'id' => 24,
+                'name' => 'Nasi Sayur Telor Dadar',
+                'created_at' => '2016-07-02 21:37:07',
+                'updated_at' => '2016-07-02 21:37:07',
+                'deleted_at' => NULL,
+            ),
+            24 => 
+            array (
+                'id' => 25,
+                'name' => 'Indomaret Wafer Stick Chocolate 500gr',
+                'created_at' => '2016-07-02 21:38:00',
+                'updated_at' => '2016-07-02 21:38:00',
+                'deleted_at' => NULL,
+            ),
+            25 => 
+            array (
+                'id' => 26,
+                'name' => 'Nasi Sayur Ayam Kecap',
+                'created_at' => '2016-07-02 21:38:34',
+                'updated_at' => '2016-07-02 21:38:34',
+                'deleted_at' => NULL,
+            ),
+            26 => 
+            array (
+                'id' => 27,
+                'name' => 'Lifebuoy BS White 100ml',
+                'created_at' => '2016-07-02 21:48:11',
+                'updated_at' => '2016-07-02 21:48:11',
+                'deleted_at' => NULL,
+            ),
+            27 => 
+            array (
+                'id' => 28,
+                'name' => 'You C1000 Orange 140ml',
+                'created_at' => '2016-07-02 21:50:50',
+                'updated_at' => '2016-07-02 21:50:50',
+                'deleted_at' => NULL,
+            ),
+            28 => 
+            array (
+                'id' => 29,
+                'name' => 'Kratingdaeng 150ml',
+                'created_at' => '2016-07-02 21:54:16',
+                'updated_at' => '2016-07-02 21:54:16',
+                'deleted_at' => NULL,
+            ),
+            29 => 
+            array (
+                'id' => 30,
+                'name' => 'Gojek Ride',
+                'created_at' => '2016-07-02 21:55:23',
+                'updated_at' => '2016-07-02 21:55:23',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
