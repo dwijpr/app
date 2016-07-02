@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Item;
+use App\Item, App\Pay, Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -18,9 +18,15 @@ class HomeController extends Controller
      */
     public function index(Request $request)
     {
-        $pays = $this->user->pays;
+        $gpays = Pay::where('user_id', $request->user()->id)->select(
+            'id', 'price', 'datetime','item_id'
+        )->get()->groupBy(function($pay) {
+            $pay->item = Item::find($pay->item_id);
+            $pay->datetime = Carbon::parse($pay->datetime);
+            return $pay->datetime->format('Y-m-d');
+        });
         return view('home', [
-            'pays' => $pays,
+            'gpays' => $gpays,
             'items' => Item::all(),
         ]);
     }

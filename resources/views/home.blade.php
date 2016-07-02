@@ -25,22 +25,12 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-12">
             <div class="well">
                 @include('home.form')
             </div>
             <div>
-                <table class="table">
-                    <tbody>
-                    @foreach($pays as $p)
-                        <tr>
-                            <td>{{ $p->datetime }}</td>
-                            <td>{{ $p->item->name }}</td>
-                            <td class="text-right">{{ $p->price }}</td>
-                        </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                @include('home.list')
             </div>
         </div>
     </div>
