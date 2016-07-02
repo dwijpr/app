@@ -477,7 +477,7 @@ class PaysTableSeeder extends Seeder
                 'datetime' => '2016-06-27 00:00:00',
                 'order' => 2,
                 'created_at' => '2016-07-02 21:39:24',
-                'updated_at' => '2016-07-02 21:39:24',
+                'updated_at' => '2016-07-03 01:59:48',
             ),
             42 => 
             array (
@@ -488,7 +488,7 @@ class PaysTableSeeder extends Seeder
                 'datetime' => '2016-06-27 00:00:00',
                 'order' => 3,
                 'created_at' => '2016-07-02 21:39:44',
-                'updated_at' => '2016-07-02 21:39:44',
+                'updated_at' => '2016-07-03 01:59:48',
             ),
             43 => 
             array (
@@ -742,6 +742,105 @@ class PaysTableSeeder extends Seeder
                 'order' => 2,
                 'created_at' => '2016-07-02 21:55:23',
                 'updated_at' => '2016-07-02 21:55:23',
+            ),
+            66 => 
+            array (
+                'id' => 67,
+                'user_id' => 1,
+                'item_id' => 31,
+                'price' => 288000,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 3,
+                'created_at' => '2016-07-03 02:02:33',
+                'updated_at' => '2016-07-03 02:02:33',
+            ),
+            67 => 
+            array (
+                'id' => 68,
+                'user_id' => 1,
+                'item_id' => 32,
+                'price' => 55000,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 4,
+                'created_at' => '2016-07-03 02:03:56',
+                'updated_at' => '2016-07-03 02:03:56',
+            ),
+            68 => 
+            array (
+                'id' => 69,
+                'user_id' => 1,
+                'item_id' => 33,
+                'price' => 40000,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 5,
+                'created_at' => '2016-07-03 02:04:52',
+                'updated_at' => '2016-07-03 02:04:52',
+            ),
+            69 => 
+            array (
+                'id' => 70,
+                'user_id' => 1,
+                'item_id' => 34,
+                'price' => 5000,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 6,
+                'created_at' => '2016-07-03 02:06:22',
+                'updated_at' => '2016-07-03 02:06:22',
+            ),
+            70 => 
+            array (
+                'id' => 71,
+                'user_id' => 1,
+                'item_id' => 35,
+                'price' => 5000,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 7,
+                'created_at' => '2016-07-03 02:06:45',
+                'updated_at' => '2016-07-03 02:06:45',
+            ),
+            71 => 
+            array (
+                'id' => 72,
+                'user_id' => 1,
+                'item_id' => 36,
+                'price' => 14900,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 8,
+                'created_at' => '2016-07-03 02:07:48',
+                'updated_at' => '2016-07-03 02:07:48',
+            ),
+            72 => 
+            array (
+                'id' => 73,
+                'user_id' => 1,
+                'item_id' => 37,
+                'price' => 7800,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 9,
+                'created_at' => '2016-07-03 02:08:10',
+                'updated_at' => '2016-07-03 02:08:10',
+            ),
+            73 => 
+            array (
+                'id' => 74,
+                'user_id' => 1,
+                'item_id' => 4,
+                'price' => 5000,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 11,
+                'created_at' => '2016-07-03 02:08:41',
+                'updated_at' => '2016-07-03 02:09:01',
+            ),
+            74 => 
+            array (
+                'id' => 75,
+                'user_id' => 1,
+                'item_id' => 9,
+                'price' => 21500,
+                'datetime' => '2016-07-02 00:00:00',
+                'order' => 10,
+                'created_at' => '2016-07-03 02:08:56',
+                'updated_at' => '2016-07-03 02:09:01',
             ),
         ));
         

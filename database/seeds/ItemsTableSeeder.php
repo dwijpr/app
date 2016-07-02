@@ -257,6 +257,62 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-02 21:55:23',
                 'deleted_at' => NULL,
             ),
+            30 => 
+            array (
+                'id' => 31,
+                'name' => 'Get Used New York Jeans',
+                'created_at' => '2016-07-03 02:02:33',
+                'updated_at' => '2016-07-03 02:02:33',
+                'deleted_at' => NULL,
+            ),
+            31 => 
+            array (
+                'id' => 32,
+                'name' => 'Game JoyPad usb 2.0',
+                'created_at' => '2016-07-03 02:03:56',
+                'updated_at' => '2016-07-03 02:03:56',
+                'deleted_at' => NULL,
+            ),
+            32 => 
+            array (
+                'id' => 33,
+                'name' => 'Super Cleaning Set MCS-01 6 in 1 MediaTech',
+                'created_at' => '2016-07-03 02:04:52',
+                'updated_at' => '2016-07-03 02:04:52',
+                'deleted_at' => NULL,
+            ),
+            33 => 
+            array (
+                'id' => 34,
+                'name' => 'Naik Angkot [Caringin - Sadang Serang]',
+                'created_at' => '2016-07-03 02:06:22',
+                'updated_at' => '2016-07-03 02:06:22',
+                'deleted_at' => NULL,
+            ),
+            34 => 
+            array (
+                'id' => 35,
+                'name' => 'Naik Angkot [Cimahi - Leuwi Panjang]',
+                'created_at' => '2016-07-03 02:06:45',
+                'updated_at' => '2016-07-03 02:06:45',
+                'deleted_at' => NULL,
+            ),
+            35 => 
+            array (
+                'id' => 36,
+                'name' => 'Choice Guava',
+                'created_at' => '2016-07-03 02:07:48',
+                'updated_at' => '2016-07-03 02:07:48',
+                'deleted_at' => NULL,
+            ),
+            36 => 
+            array (
+                'id' => 37,
+                'name' => 'Fruit Tea Blackcurrant',
+                'created_at' => '2016-07-03 02:08:10',
+                'updated_at' => '2016-07-03 02:08:10',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
