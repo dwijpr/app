@@ -113,6 +113,22 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-02 17:44:15',
                 'deleted_at' => NULL,
             ),
+            12 => 
+            array (
+                'id' => 13,
+                'name' => 'Sari Roti - Sandwich Coklat',
+                'created_at' => '2016-07-02 20:56:58',
+                'updated_at' => '2016-07-02 20:56:58',
+                'deleted_at' => NULL,
+            ),
+            13 => 
+            array (
+                'id' => 14,
+                'name' => 'Sari Roti - Sandwich Srikaya',
+                'created_at' => '2016-07-02 20:57:50',
+                'updated_at' => '2016-07-02 20:57:50',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
