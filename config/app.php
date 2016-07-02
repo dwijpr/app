@@ -8,7 +8,7 @@ return [
 
     'name' => 'Piro',
 
-    'dark' => true,
+    'dark' => !true,
     /*
     |--------------------------------------------------------------------------
     | Application Environment

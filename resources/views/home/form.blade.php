@@ -6,7 +6,7 @@
 ]) !!}
     <div class="form-group">
         <div class="
-            col-md-5
+            col-md-6
             col-md-offset-0
             col-sm-6
             col-sm-offset-3{{ $errors->has('item')?' has-error':'' }}"
@@ -43,14 +43,14 @@
             </div>
         </div>
         <div class="
-            col-md-3
+            col-md-2
             col-md-offset-0
             col-sm-6
             col-sm-offset-3{{ $errors->has('datetime')?' has-error':'' }}"
         >
             <div>
-                {{ Form::text('datetime', date('Y-m-d h:i:s'), [
-                    'class' => 'form-control text-center',
+                {{ Form::text('datetime', date('Y-m-d'), [
+                    'class' => 'form-control text-center datepicker',
                     'placeholder' => 'Paid Date & Time',
                     'autocomplete' => 'off',
                 ]) }}

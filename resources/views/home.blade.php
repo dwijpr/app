@@ -8,17 +8,24 @@
     }
     .tt-menu.tt-open {
         padding: 8px;
-        background: black;
+        background: {{ config('dark')?'#333':'#ddd' }};
     }
 </style>
 @endsection
 
 @section('head')
+{{ Html::style(
+    '/thirdparty/jquery-ui/1.11.4/jquery-ui.css'
+) }}
+
 {{ Html::script(
     '/thirdparty/typeahead.js/0.11.1/dist/typeahead.jquery.js'
 ) }}
 {{ Html::script(
     '/thirdparty/Numeral-js/1.5.3/numeral.js'
+) }}
+{{ Html::script(
+    '/thirdparty/jquery-ui/1.11.4/jquery-ui.js'
 ) }}
 @endsection
 
@@ -80,6 +87,12 @@ $("#add-pay").submit(function() {
     $(".numeral").each(function() {
         var unformat = numeral().unformat($(this).val());
         $(this).val(unformat);
+    });
+});
+
+$(function() {
+    $( ".datepicker" ).datepicker({
+        dateFormat: 'yy-mm-dd'
     });
 });
 </script>
