@@ -49,6 +49,9 @@
 {{ Html::script(
     '/thirdparty/jquery-ui/1.11.4/jquery-ui.js'
 ) }}
+{{ Html::script(
+    '/thirdparty/masonry/4.1.0/dist/masonry.pkgd.js'
+) }}
 @endsection
 
 @section('content')
@@ -116,6 +119,14 @@ $(function() {
     $( ".datepicker" ).datepicker({
         dateFormat: 'yy-mm-dd'
     });
+});
+
+$(function() {
+    if ($('.masonry-container').length > 0) {
+        var msnry = new Masonry( '.masonry-container', {
+        // options
+        });
+    }
 });
 </script>
 @endsection
