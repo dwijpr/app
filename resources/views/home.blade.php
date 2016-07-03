@@ -8,13 +8,13 @@
     }
     .tt-menu.tt-open {
         padding: 8px;
-        background: {{ config('dark')?'#333':'#ddd' }};
+        background: {{ config('app.dark')?'#333':'#ddd' }};
     }
     .tt-suggestion {
-        color: {{ config('dark')?'#ddd':'#333' }};
+        color: {{ config('app.dark')?'#ddd':'#333' }};
     }
     .tt-suggestion .tt-highlight{
-        color: {{ config('dark')?'#fff':'#111' }};
+        color: {{ config('app.dark')?'#fff':'#111' }};
     }
 
     form .form-control {
@@ -57,7 +57,7 @@
         padding: 12px;
     }
     .block-info {
-        background: #ccc;
+        background: {{ config('app.dark')?'#333':'#ccc' }};
         padding-bottom: 64px;
     }
     @media (min-width: 992px) {
