@@ -19,9 +19,11 @@
                 <div class="pay-items">
                     @foreach($gpays->get($key) as $p)
                     <div class="s-row">
-                        <div class="name s-cell" title="{{ $p->item->name }}">
+                        <div class="name s-cell">
                             <div class="truncate">
-                                {{ $p->item->name }}
+                                <span title="{{ $p->item->name }}">
+                                    {{ $p->item->name }}
+                                </span>
                             </div>
                         </div>
                         <div class="price s-cell numeral-human">

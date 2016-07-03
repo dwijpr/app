@@ -11,6 +11,17 @@ class HomeController extends Controller
     public function __construct() {
         $this->user = request()->user();
     }
+
+    public function week(Request $request) {
+        $gpays = Pay::where('user_id', $request->user()->id)->select(
+            'id', 'price', 'datetime','item_id'
+        )->get()->groupBy(function($pay) {
+            $pay->item = Item::find($pay->item_id);
+            $pay->datetime = Carbon::parse($pay->datetime);
+            return $pay->datetime->format('W');
+        });
+        dd($gpays);
+    }
     /**
      * Show the application dashboard.
      *

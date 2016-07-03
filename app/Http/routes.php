@@ -19,6 +19,10 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+$router->get('/home/weekly', [
+    'uses' => 'HomeController@week',
+    'middleware' => 'auth',
+]);
 $router->post('/home', [
     'uses' => 'HomeController@store',
     'middleware' => 'auth',
