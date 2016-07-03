@@ -76,7 +76,7 @@
     }
 
     .pay-main {
-        padding-top: 32px;
+        padding-top: 16px;
     }
 </style>
 @endsection

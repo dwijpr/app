@@ -29,7 +29,7 @@
         .panel, .table {
             background: #444;
         }
-        .table tr:hover td{
+        .table.table-hover tr:hover td{
             color: #222;
         }
         .well {

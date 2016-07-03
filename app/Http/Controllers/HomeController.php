@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\Item, App\Pay, Carbon\Carbon;
+use App\Item, App\Pay, Carbon\Carbon, stdClass;
 
 class HomeController extends Controller
 {
@@ -35,12 +35,28 @@ class HomeController extends Controller
         $gkeys = $gpays->keys()->toArray();
         rsort($gkeys);
         $total = $request->user()->pays()->sum('price');
+        $max_date =  Carbon::parse($request->user()->pays()->max('datetime'));
+        $min_date =  Carbon::parse($request->user()->pays()->min('datetime'));
+        $_year_months = year_months_list($max_date, $min_date);
+        rsort($_year_months);
+        $year_months = [];
+        foreach ($_year_months as $year_month) {
+            $_year_month = explode('-', $year_month);
+            $_ = new stdClass;
+            $_->date = Carbon::parse($year_month);
+            $_->price = $request->user()->pays()
+                    ->whereYear('datetime', '=', $_year_month[0])
+                    ->whereMonth('datetime', '=', $_year_month[1])
+                    ->sum('price');
+            $year_months[$year_month] = $_;
+        }
         return view('home', [
             'view_path' => 'home.index',
             'gkeys' => $gkeys,
             'gpays' => $gpays,
             'items' => Item::all(),
             'total' => $total,
+            'year_months' => $year_months,
         ]);
     }
 

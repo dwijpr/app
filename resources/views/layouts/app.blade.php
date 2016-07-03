@@ -12,7 +12,7 @@
 <nav class="navbar navbar-{{ config(
     'app.dark'
 )?'inverse':'default' }} navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
 
             <!-- Collapsed Hamburger -->

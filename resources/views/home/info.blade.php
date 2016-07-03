@@ -8,34 +8,28 @@
 <div class="text-center">
     <h3>Your Summary</h3>
 </div>
-<table class="table" style="width: 100%;">
-    <tr>
-        <td>
-            <label>Total</label>
-        </td>
-        <td class="text-right numeral-read">
-            {{ $total }}
-        </td>
-    </tr>
-</table>
 <div class="text-control">
     <h4>Months</h4>
 </div>
 <table class="table" style="width: 100%;">
+    @foreach($year_months as $ym)
     <tr>
         <td>
-            <label>July</label>
+            <label>{{ $ym->date->format('F Y') }}</label>
         </td>
         <td class="text-right numeral-read">
-            1255500
+            {{ $ym->price }}
         </td>
     </tr>
+    @endforeach
     <tr>
         <td>
-            <label>June</label>
+            <label>Total</label>
         </td>
-        <td class="text-right numeral-read">
-            1255500
+        <td class="text-right">
+            <b class="numeral-read">
+                {{ $total }}
+            </b>
         </td>
     </tr>
 </table>
