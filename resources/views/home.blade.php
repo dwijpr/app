@@ -57,7 +57,7 @@
         padding: 12px;
     }
     .block-info {
-        background: {{ config('app.dark')?'#333':'#ccc' }};
+        background: {{ config('app.dark')?'#333':'#e3e3e3' }};
         padding-bottom: 64px;
     }
     @media (min-width: 992px) {
@@ -105,7 +105,8 @@
     <div class="row">
         <div
             class="
-                col-sm-12 col-md-3 block-info visible-xs-block visible-sm-block
+                col-xs-12 col-sm-12 col-md-3
+                block-info visible-xs-block visible-sm-block
             "
         >
             @include('home.info')
@@ -116,7 +117,12 @@
         >
             @include('home.info')
         </div>
-        <div class="col-sm-offset-0 col-sm-12 col-md-offset-3 col-md-9">
+        <div
+            class="
+                col-xs-offset-0 col-xs-12
+                col-sm-offset-0 col-sm-12 col-md-offset-3 col-md-9
+            "
+        >
             @include($view_path)
         </div>
     </div>

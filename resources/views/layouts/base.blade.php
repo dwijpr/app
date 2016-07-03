@@ -35,6 +35,10 @@
         .well {
             background: #555;
         }
+        @else
+        hr {
+            border-color: #aaa;
+        }
         @endif
 
         .fa-btn {
@@ -61,6 +65,10 @@
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
+        }
+
+        [class*="numeral-"] {
+            font-family: monospace;
         }
     </style>
 

@@ -55,9 +55,11 @@
             </div>
         </div>
         <div class="col-sm-12">
-            <button class="btn btn-primary" style="width: 100%;">
-                {{ 'Add' }}
-            </button>
+            <div style="padding: 4px 2px;">
+                <button class="btn btn-primary" style="width: 100%;">
+                    {{ 'Add' }}
+                </button>
+            </div>
         </div>
     </div>
 {!! Form::close() !!}

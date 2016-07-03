@@ -7,9 +7,7 @@
 </div>
 <div class="text-center">
     <h3>Your Summary</h3>
-</div>
-<div class="text-control">
-    <h4>Months</h4>
+    <hr>
 </div>
 <table class="table" style="width: 100%;">
     @foreach($year_months as $ym)
