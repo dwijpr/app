@@ -1,7 +1,7 @@
 <div class="row masonry-container">
     @foreach($gkeys as $key)
         <div class="col-xs-12 col-sm-12 col-md-4 col-sm-6 item">
-            <div class="well">
+            <div class="well pay-group">
                 <h3>
                     {{ $gpays->get($key)[0]->datetime->format('l') }}
                     <sup>

@@ -12,16 +12,6 @@ class HomeController extends Controller
         $this->user = request()->user();
     }
 
-    public function week(Request $request) {
-        $gpays = Pay::where('user_id', $request->user()->id)->select(
-            'id', 'price', 'datetime','item_id'
-        )->get()->groupBy(function($pay) {
-            $pay->item = Item::find($pay->item_id);
-            $pay->datetime = Carbon::parse($pay->datetime);
-            return $pay->datetime->format('W');
-        });
-        dd($gpays);
-    }
     /**
      * Show the application dashboard.
      *
@@ -44,10 +34,13 @@ class HomeController extends Controller
         }
         $gkeys = $gpays->keys()->toArray();
         rsort($gkeys);
+        $total = $request->user()->pays()->sum('price');
         return view('home', [
+            'view_path' => 'home.index',
             'gkeys' => $gkeys,
             'gpays' => $gpays,
             'items' => Item::all(),
+            'total' => $total,
         ]);
     }
 

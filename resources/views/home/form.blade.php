@@ -1,15 +1,12 @@
 {!! Form::open([
     'url' => 'home',
-    'class' => 'form-horizontal',
+    'class' => 'form-horizontal add-pay-form',
     'role' => 'form',
-    'id' => 'add-pay'
 ]) !!}
     <div class="form-group">
         <div class="
-            col-md-6
-            col-md-offset-0
-            col-sm-6
-            col-sm-offset-3{{ $errors->has('item')?' has-error':'' }}"
+            col-sm-12
+            {{ $errors->has('item')?' has-error':'' }}"
         >
             <div id="the-basics">
                 {{ Form::text('item', null, [
@@ -24,10 +21,8 @@
             </div>
         </div>
         <div class="
-            col-md-2
-            col-md-offset-0
-            col-sm-6
-            col-sm-offset-3{{ $errors->has('price')?' has-error':'' }}"
+            col-sm-12
+            {{ $errors->has('price')?' has-error':'' }}"
         >
             <div>
                 {{ Form::text('price', null, [
@@ -43,10 +38,8 @@
             </div>
         </div>
         <div class="
-            col-md-2
-            col-md-offset-0
-            col-sm-6
-            col-sm-offset-3{{ $errors->has('datetime')?' has-error':'' }}"
+            col-sm-12
+            {{ $errors->has('datetime')?' has-error':'' }}"
         >
             <div>
                 {{ Form::text('datetime', date('Y-m-d'), [
@@ -61,12 +54,7 @@
                 @endif
             </div>
         </div>
-        <div class="
-            col-md-2
-            col-md-offset-0
-            col-sm-6
-            col-sm-offset-3"
-        >
+        <div class="col-sm-12">
             <button class="btn btn-primary" style="width: 100%;">
                 {{ 'Add' }}
             </button>
