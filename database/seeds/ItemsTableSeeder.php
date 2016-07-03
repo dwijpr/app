@@ -313,6 +313,38 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-03 02:08:10',
                 'deleted_at' => NULL,
             ),
+            37 => 
+            array (
+                'id' => 38,
+                'name' => 'Nasi Ayam Goreng Ampera',
+                'created_at' => '2016-07-03 04:23:52',
+                'updated_at' => '2016-07-03 04:23:52',
+                'deleted_at' => NULL,
+            ),
+            38 => 
+            array (
+                'id' => 39,
+                'name' => 'Rinso Liq.A/N PCH800',
+                'created_at' => '2016-07-03 17:09:03',
+                'updated_at' => '2016-07-03 17:09:03',
+                'deleted_at' => NULL,
+            ),
+            39 => 
+            array (
+                'id' => 40,
+                'name' => 'Indocafe Coffemix 3 in 1 10S',
+                'created_at' => '2016-07-03 17:09:32',
+                'updated_at' => '2016-07-03 17:09:32',
+                'deleted_at' => NULL,
+            ),
+            40 => 
+            array (
+                'id' => 41,
+                'name' => 'Bagus Sikat Baju 20930',
+                'created_at' => '2016-07-03 17:09:55',
+                'updated_at' => '2016-07-03 17:09:55',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
