@@ -50,6 +50,18 @@
         footer {
             padding: 32px 0;
         }
+
+        table {
+            font-size: 14px;
+        }
+
+        .truncate {
+            position: relative;
+            top: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     </style>
 
     @yield('style')

@@ -16,21 +16,34 @@
     .tt-suggestion .tt-highlight{
         color: {{ config('dark')?'#fff':'#111' }};
     }
-    .pay-item .pull-right {
-        display: none;
-    }
-    .pay-item:hover {
-        color: #000;
-    }
-    .pay-item:hover .pull-right {
-        display: block;
-    }
 
     form .form-control {
         border-radius: 0;
     }
     form .btn {
         border-radius: 0;
+    }
+
+    div.pay-items {
+        width: 100%;
+    }
+    div.pay-items .s-row:hover .action {
+        display: inline-block;
+    }
+    div.pay-items .s-cell {
+        display: inline-block;
+    }
+    div.pay-items .name {
+        width: 50%;
+    }
+    div.pay-items .price {
+        width: 18%;
+        text-align: right;
+    }
+    div.pay-items .action {
+        width: 25%;
+        text-align: right;
+        display: none;
     }
 </style>
 @endsection
@@ -127,6 +140,15 @@ $(function() {
         // options
         });
     }
+});
+
+$(function() {
+    $(".numeral-human").each(function() {
+        var el = this;
+        $(this).html(numeral(
+            $(el).html()
+        ).format('0.0a'));
+    });
 });
 </script>
 @endsection
