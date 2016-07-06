@@ -1,16 +1,7 @@
 ToDos
 =====
 
-- include assets as local resources
+- http://image.intervention.io/getting_started/installation#laravel
 
-    - ~~lato ttf font~~
+- edit / update
 
-- implement world cities database
-
-- Profile Feature
-
-    - profile picture default
-
-        - ~~navbar~~
-
-    - profile index design
