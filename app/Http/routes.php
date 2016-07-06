@@ -19,3 +19,12 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+
+$router->group([
+    'middleware' => [
+        'auth', 'roles',
+    ],
+    'roles' => 'admin',
+], function ($router) {
+    $router->resource('/image', 'ImageController');
+});
