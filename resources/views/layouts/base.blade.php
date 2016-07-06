@@ -4,16 +4,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>{{ config('app.name') }}</title>
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+    <style>
+        @font-face {
+            font-family: 'Lato';
+            src: url(/thirdparty/fonts/Lato/Lato-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url(/thirdparty/fonts/Lato/Lato-Hairline.ttf);
+            font-weight: 100;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url(/thirdparty/fonts/Lato/Lato-Light.ttf);
+            font-weight: 200;
+        }
+        @font-face {
+            font-family: 'Lato';
+            src: url(/thirdparty/fonts/Lato/Lato-Bold.ttf);
+            font-weight: bold;
+        }
+    </style>
+    {{ Html::style(
+        'thirdparty/font-awesome/4.6.3/css/font-awesome.css'
+    ) }}
+    {{ Html::style(
+        'thirdparty/bootstrap/3.3.6/css/bootstrap.css'
+    ) }}
     <style>
         body {
             font-family: 'Lato';
@@ -29,8 +47,15 @@
         .panel, .table {
             background: #444;
         }
-        .table tr:hover td{
+        .table.table-hover tr:hover td{
             color: #222;
+        }
+        .well {
+            background: #555;
+        }
+        @else
+        hr {
+            border-color: #aaa;
         }
         @endif
 
@@ -47,31 +72,49 @@
         footer {
             padding: 32px 0;
         }
+
+        table {
+            font-size: 14px;
+        }
+
+        .truncate {
+            position: relative;
+            top: 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        [class*="numeral-"] {
+            font-family: monospace;
+        }
+        [class*="ui-datepicker-"] {
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            font-weight: 100;
+        }
     </style>
-
     @yield('style')
-
-    <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
+    {{ Html::script('js/app.js') }}
+    {{ Html::script('thirdparty/jquery-2.2.4.js') }}
+    {{ Html::script('thirdparty/bootstrap/3.3.6/js/bootstrap.js') }}
+    @yield('head')
 </head>
 <body id="app-layout">
-
     @yield('_content')
-
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
                 <footer>
                     <a href="{{ url('') }}">
-                        &copy;{{ date('Y') }} {{ config('app.name') }}
+                        <b>&copy;{{ date('Y') }} {{ config('app.name') }}</b>
                     </a>
                 </footer>
             </div>
         </div>
     </div>
-
-    <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    @yield('script')
 </body>
 </html>

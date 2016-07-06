@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -12,7 +13,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'username', 'email',
+        'firstname', 'lastname',
+        'sex', 'dob', 'occupation',
+        'password',
     ];
 
     /**
@@ -23,6 +27,26 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function age() {
+        return $this->dob()->diff(
+            Carbon::now()
+        )->format('%y');
+    }
+
+    public function dob() {
+        return Carbon::parse($this->dob);
+    }
+
+    public function img() {
+        return asset('img/icon-'.config('app.sex')[$this->sex].'.svg');
+    }
+
+    public function name() {
+        return implode(' ', [
+            $this->firstname, $this->lastname,
+        ]);
+    }
 
     public function roles() {
         return $this->belongsToMany(Role::class);

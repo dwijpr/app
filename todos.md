@@ -1,4 +1,16 @@
 ToDos
 =====
 
-Add global constant ~ user constant -> db seeding, tests
+- include assets as local resources
+
+    - ~~lato ttf font~~
+
+- implement world cities database
+
+- Profile Feature
+
+    - profile picture default
+
+        - ~~navbar~~
+
+    - profile index design

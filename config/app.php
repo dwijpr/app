@@ -3,12 +3,17 @@
 return [
 
     'base' => [
-        'name' => 'base.dev'
+        'name' => 'Base'
     ],
 
     'name' => 'App',
 
-    'dark' => true,
+    'dark' => !true,
+
+    'sex' => [
+        0 => 'female',
+        1 => 'male',
+    ],
     /*
     |--------------------------------------------------------------------------
     | Application Environment
@@ -170,6 +175,7 @@ return [
          */
         Collective\Html\HtmlServiceProvider::class,
         App\Providers\BootstrapFormServiceProvider::class,
+        Orangehill\Iseed\IseedServiceProvider::class,
     ],
 
     /*
