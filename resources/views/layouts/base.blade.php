@@ -95,6 +95,12 @@
         h1, h2, h3 {
             font-weight: 100;
         }
+        .full {
+            width: 100%;
+        }
+        .square {
+            border-radius: 0;
+        }
     </style>
     @yield('style')
     {{ Html::script('js/app.js') }}
