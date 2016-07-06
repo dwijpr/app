@@ -6,7 +6,7 @@ return [
         'name' => 'Base'
     ],
 
-    'name' => 'App',
+    'name' => 'IMG',
 
     'dark' => !true,
 
