@@ -425,6 +425,14 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-06 17:02:40',
                 'deleted_at' => NULL,
             ),
+            51 => 
+            array (
+                'id' => 52,
+                'name' => 'Teh Botol Sosro Origin 1L',
+                'created_at' => '2016-07-06 19:18:31',
+                'updated_at' => '2016-07-06 19:18:31',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
