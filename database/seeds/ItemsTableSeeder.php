@@ -393,6 +393,38 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-05 10:07:25',
                 'deleted_at' => NULL,
             ),
+            47 => 
+            array (
+                'id' => 48,
+                'name' => 'Siomay',
+                'created_at' => '2016-07-06 16:59:00',
+                'updated_at' => '2016-07-06 16:59:00',
+                'deleted_at' => NULL,
+            ),
+            48 => 
+            array (
+                'id' => 49,
+                'name' => 'Indomie Goreng Telor',
+                'created_at' => '2016-07-06 17:01:22',
+                'updated_at' => '2016-07-06 17:01:22',
+                'deleted_at' => NULL,
+            ),
+            49 => 
+            array (
+                'id' => 50,
+                'name' => 'Tolak Angin 5s',
+                'created_at' => '2016-07-06 17:02:10',
+                'updated_at' => '2016-07-06 17:02:10',
+                'deleted_at' => NULL,
+            ),
+            50 => 
+            array (
+                'id' => 51,
+                'name' => 'Buavita Mango 1L',
+                'created_at' => '2016-07-06 17:02:40',
+                'updated_at' => '2016-07-06 17:02:40',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
