@@ -29,6 +29,13 @@
             'for' => 'image',
         ]) }}
         <div class="col-sm-6">
+            @if(@$object)
+            {{ Html::image(
+                '/image/'.$object->id
+                , $object->name
+                , ['style' => 'max-width: 256px; max-height: 256px;']
+            ) }}
+            @endif
             {{ Form::file('image', [
                 'class' => 'form-control'
             ]) }}

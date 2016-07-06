@@ -1,5 +1,11 @@
 <?php
 
+if (!function_exists('no_ext')) {
+    function no_ext($filename) {
+        return preg_replace("/\.[^.]+$/", "", $filename);
+    }
+}
+
 if (!function_exists('storage')) {
     function storage() {
         return Storage::disk('local');

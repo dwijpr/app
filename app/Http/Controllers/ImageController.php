@@ -54,7 +54,7 @@ class ImageController extends Controller
 
         $image = Image::create([
             'user_id' => $request->user_id,
-            'name' => $file->getClientOriginalName(),
+            'name' => no_ext($file->getClientOriginalName()),
             'storage' => $filename,
         ]);
         return redirect('/image');
@@ -69,7 +69,10 @@ class ImageController extends Controller
     public function show(Image $image)
     {
         $file = storage()->get($image->storage);
-        return response($file, 200);
+        $mime = storage()->mimeType($image->storage);
+        return response($file, 200, [
+            'Content-type' => $mime,
+        ]);
     }
 
     /**
@@ -78,9 +81,12 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Image $image)
     {
-        //
+        return view('images.edit', [
+            'object' => $image,
+            'users' => User::all(),
+        ]);
     }
 
     /**
@@ -90,9 +96,23 @@ class ImageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Image $image)
     {
-        //
+        $this->validate($request, [
+            'user_id' => 'required',
+            'image' => 'image',
+        ]);
+        $data = [ 'user_id' => $request->user_id ];
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            $filename = $file->getFilename()
+                .'.'.$file->getClientOriginalExtension();
+            storage()->put($filename, file_get_contents($file->getRealPath()));
+            $data['name'] = no_ext($file->getClientOriginalName());
+            $data['storage'] = $filename;
+        }
+        $image->update($data);
+        return redirect('/image');
     }
 
     /**
