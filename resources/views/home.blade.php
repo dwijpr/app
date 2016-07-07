@@ -2,6 +2,9 @@
 
 @section('_style')
 <style>
+body {
+    background: #f4f4f4;
+}
 .add-image-container {
     background: #efefef;
     padding: 32px 64px 8px;
@@ -10,12 +13,18 @@
 .img {
     padding: 32px 8px;
     text-align: center;
+    height: 156px;
 }
 .img-item {
     display: inline-block;
     margin: 0 auto;
     max-width: 100%;
-    height: 128px;
+    max-height: 128px;
+    border: 1px solid #bbb;
+    opacity: .6;
+}
+.img:hover .img-item {
+    opacity: 1;
 }
 </style>
 @endsection
@@ -56,7 +65,7 @@
         <div class="col-md-12">
             <div class="row">
                 @foreach($objects as $o)
-                    <div class="col-md-3 col-sm-4 col-xs-2 img">
+                    <div class="col-md-3 col-sm-4 col-xs-6 img">
                         {{ Html::image('/image/'.$o->id, $o->name, [
                             'class' => 'img-item'
                         ]) }}
