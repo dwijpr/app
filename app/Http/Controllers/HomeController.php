@@ -23,15 +23,19 @@ class HomeController extends Controller
     }
 
     public function show(Image $image, $option = false) {
-        $file = storage()->get($image->storage);
-        $file = IntImage::make($file);
-        if ($option === 'opt') {
-            $file->resize(null, 128, function ($constraint) {
-                $constraint->aspectRatio();
-            });
+        $path = $image->storage;
+        if (in_array($option, [
+            'xs', 'sm', 'md'
+        ])) {
+            $ext = pathinfo($path, PATHINFO_EXTENSION);
+            $path = implode('.', [
+                no_ext($path),
+                $option,
+                $ext,
+            ]);
         }
-        return $file->response();
-        $mime = storage()->mimeType($image->storage);
+        $file = storage()->get($path);
+        $mime = storage()->mimeType($path);
         return response($file, 200, [
             'Content-type' => $mime,
         ]);
@@ -52,6 +56,38 @@ class HomeController extends Controller
             'name' => no_ext($file->getClientOriginalName()),
             'storage' => $filename,
         ]);
+        $this->makeAlts($file);
+
         return redirect('/home');
+    }
+
+    function makeAlts($image) {
+        try {
+            $ext = $image->getClientOriginalExtension();
+            $path = $image->getRealPath();
+            $alts = [
+                'xs' => 64,
+                'sm' => 128,
+                'md' => 256,
+            ];
+            foreach ($alts as $key => $size) {
+                $img = IntImage::make($path);
+                $img->resize(null, $size, function($constraint) {
+                    $constraint->aspectRatio();
+                });
+                $img->save(
+                    storage_path(
+                        'app/'.
+                        implode('.', [
+                            $image->getFilename(),
+                            $key,
+                            $ext,
+                        ])
+                    )
+                );
+            }
+        } catch (Exception $e) {
+            dd($e);
+        }
     }
 }

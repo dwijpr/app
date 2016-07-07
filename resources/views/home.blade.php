@@ -12,7 +12,7 @@ body {
 }
 .img {
     padding: 32px 8px;
-    height: 156px;
+    height: 216px;
 }
 .img table {
     width: 100%;
@@ -21,6 +21,7 @@ body {
     text-align: center;
     vertical-align: middle;
     height: 156px;
+    padding: 0;
 }
 .img-item {
     display: inline-block;

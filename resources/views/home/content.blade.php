@@ -40,7 +40,7 @@
                             <tr>
                                 <td>
                                     {{ Html::image(
-                                        '/'.$o->id.'/opt', $o->name, [
+                                        '/'.$o->id.'/sm', $o->name, [
                                             'class' => 'img-item'
                                         ]
                                     ) }}
