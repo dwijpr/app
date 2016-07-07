@@ -433,6 +433,62 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-06 19:18:31',
                 'deleted_at' => NULL,
             ),
+            52 => 
+            array (
+                'id' => 53,
+                'name' => 'Indocafe Coffemix Big',
+                'created_at' => '2016-07-07 12:37:21',
+                'updated_at' => '2016-07-07 12:37:21',
+                'deleted_at' => NULL,
+            ),
+            53 => 
+            array (
+                'id' => 54,
+                'name' => 'Swallow SD Khusu',
+                'created_at' => '2016-07-07 12:37:56',
+                'updated_at' => '2016-07-07 12:37:56',
+                'deleted_at' => NULL,
+            ),
+            54 => 
+            array (
+                'id' => 55,
+                'name' => 'Nivea R/D Melkic',
+                'created_at' => '2016-07-07 12:38:20',
+                'updated_at' => '2016-07-07 12:38:20',
+                'deleted_at' => NULL,
+            ),
+            55 => 
+            array (
+                'id' => 56,
+                'name' => 'Lifebuoy Red White 100ml',
+                'created_at' => '2016-07-07 12:38:49',
+                'updated_at' => '2016-07-07 12:38:49',
+                'deleted_at' => NULL,
+            ),
+            56 => 
+            array (
+                'id' => 57,
+                'name' => 'GreenBell SMMDBS',
+                'created_at' => '2016-07-07 12:39:22',
+                'updated_at' => '2016-07-07 12:39:22',
+                'deleted_at' => NULL,
+            ),
+            57 => 
+            array (
+                'id' => 58,
+                'name' => 'Indomie Pop Mie Baso',
+                'created_at' => '2016-07-07 12:39:40',
+                'updated_at' => '2016-07-07 12:39:40',
+                'deleted_at' => NULL,
+            ),
+            58 => 
+            array (
+                'id' => 59,
+                'name' => 'Nasi Padang Rendang Telor Dadar',
+                'created_at' => '2016-07-07 12:40:17',
+                'updated_at' => '2016-07-07 12:40:17',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
