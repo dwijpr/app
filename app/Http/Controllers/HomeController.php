@@ -17,7 +17,8 @@ class HomeController extends Controller
     {
         return view('home', [
             'users' => User::all(),
-            'objects' => $request->user()->images,
+            'objects' => $request->user()->images()
+                ->orderBy('created_at', 'desc')->get(),
         ]);
     }
 

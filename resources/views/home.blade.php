@@ -28,7 +28,7 @@ body {
     max-width: 100%;
     max-height: 128px;
     border: 1px solid #bbb;
-    opacity: .6;
+    opacity: .7;
 }
 .img:hover .img-item {
     opacity: 1;
