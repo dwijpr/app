@@ -8,6 +8,11 @@ use App\User, App\Image, Image as IntImage;
 
 class HomeController extends Controller
 {
+    private $alts = [
+        'xs' => 64,
+        'sm' => 128,
+        'md' => 256,
+    ];
     /**
      * Show the application dashboard.
      *
@@ -22,11 +27,24 @@ class HomeController extends Controller
         ]);
     }
 
+    public function destroy(Image $image) {
+        storage()->delete($image->storage);
+        $path = $image->storage;
+        $ext = pathinfo($path, PATHINFO_EXTENSION);
+        foreach ($this->alts as $key => $alt) {
+            storage()->delete(implode('.', [
+                no_ext($path),
+                $key,
+                $ext,
+            ]));
+        }
+        $image->delete();
+        return redirect('/home');
+    }
+
     public function show(Image $image, $option = false) {
         $path = $image->storage;
-        if (in_array($option, [
-            'xs', 'sm', 'md'
-        ])) {
+        if (in_array($option, array_keys($this->alts))) {
             $ext = pathinfo($path, PATHINFO_EXTENSION);
             $path = implode('.', [
                 no_ext($path),
@@ -65,12 +83,7 @@ class HomeController extends Controller
         try {
             $ext = $image->getClientOriginalExtension();
             $path = $image->getRealPath();
-            $alts = [
-                'xs' => 64,
-                'sm' => 128,
-                'md' => 256,
-            ];
-            foreach ($alts as $key => $size) {
+            foreach ($this->alts as $key => $size) {
                 $img = IntImage::make($path);
                 $img->resize(null, $size, function($constraint) {
                     $constraint->aspectRatio();

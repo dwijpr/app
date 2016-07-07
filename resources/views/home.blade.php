@@ -11,8 +11,8 @@ body {
     border-bottom: 1px solid #777;
 }
 .img {
-    padding: 32px 8px;
-    height: 216px;
+    padding: 4px;
+    height: 160px;
 }
 .img table {
     width: 100%;
@@ -33,6 +33,13 @@ body {
 }
 .img:hover .img-item {
     opacity: 1;
+}
+.img-delete {
+    display: none;
+    position: absolute;
+}
+.img table td:hover .img-delete {
+    display: inline;
 }
 </style>
 @endsection

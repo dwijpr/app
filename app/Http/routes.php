@@ -22,6 +22,9 @@ $router->get('/home', [
 $router->get('/{image}/{option?}', [
     'uses' => 'HomeController@show',
 ]);
+$router->delete('/{image}', [
+    'uses' => 'HomeController@destroy',
+]);
 $router->post('/home', [
     'uses' => 'HomeController@store',
     'middleware' => 'auth',
