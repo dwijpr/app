@@ -19,6 +19,9 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+$router->get('/{image}/{option?}', [
+    'uses' => 'HomeController@show',
+]);
 $router->post('/home', [
     'uses' => 'HomeController@store',
     'middleware' => 'auth',

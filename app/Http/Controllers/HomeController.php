@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use App\User, App\Image;
+use App\User, App\Image, Image as IntImage;
 
 class HomeController extends Controller
 {
@@ -18,6 +18,21 @@ class HomeController extends Controller
         return view('home', [
             'users' => User::all(),
             'objects' => $request->user()->images,
+        ]);
+    }
+
+    public function show(Image $image, $option = false) {
+        $file = storage()->get($image->storage);
+        $file = IntImage::make($file);
+        if ($option === 'opt') {
+            $file->resize(null, 128, function ($constraint) {
+                $constraint->aspectRatio();
+            });
+        }
+        return $file->response();
+        $mime = storage()->mimeType($image->storage);
+        return response($file, 200, [
+            'Content-type' => $mime,
         ]);
     }
 

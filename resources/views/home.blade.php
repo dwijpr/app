@@ -66,7 +66,7 @@ body {
             <div class="row">
                 @foreach($objects as $o)
                     <div class="col-md-3 col-sm-4 col-xs-6 img">
-                        {{ Html::image('/image/'.$o->id, $o->name, [
+                        {{ Html::image('/'.$o->id.'/opt', $o->name, [
                             'class' => 'img-item'
                         ]) }}
                     </div>
