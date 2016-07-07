@@ -24,6 +24,22 @@ if (!function_exists('os_to_kvs')) {
     }
 }
 
+if (!function_exists('l')) {
+    function l($key, $object = []) {
+        $stringObject = json_encode($object);
+        \App\Log::create([
+            'user_id' => @auth()->user()->id,
+            'key' => $key,
+            'uri' => request()->getRequestUri(),
+            'method' => request()->getMethod(),
+            'user_agent' => request()->header('User-Agent'),
+            'ip_address' => request()->ip(),
+            'app' => config('app.name'),
+            'data' => $stringObject,
+        ]);
+    }
+}
+
 if(!function_exists('root_url')){
     function root_url($path = false){
         $url = $_SERVER['SERVER_NAME'].($path?"/".$path:"");
