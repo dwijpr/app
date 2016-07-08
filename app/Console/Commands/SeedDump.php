@@ -38,25 +38,32 @@ class SeedDump extends Command
      */
     public function handle()
     {
-        $tables = DB::select('show tables');
+        $db = config('database.connections.mysql.database');
+        $prefix = config('database.connections.mysql.prefix');
+        $query = "show tables where Tables_in_$db"
+            ." like '{$prefix}%' and Tables_in_$db != '{$prefix}migrations'";
+        $tables = DB::select($query);
         $this->info('tables list:');
-        $items = [];
-        $db_name = config('database.connections.mysql.database');
-        foreach ($tables as $i => $table) {
-            $name = $table->{'Tables_in_'.$db_name};
-            $this->line("- ".$name);
-            $skips = [
-                'migrations', 'logs',
-            ];
-            if (in_array($name, $skips)) {
-                $this->line('!! skipping migrations table');
-            } else {
-                $items[] = $name;
+        if (!empty($tables)) {
+            $items = [];
+            foreach ($tables as $i => $table) {
+                $name = $table->{'Tables_in_'.$db};
+                $this->line("- ".$name);
+                $skips = [
+                    'migrations', 'logs',
+                ];
+                if (in_array($name, $skips)) {
+                    $this->line('!! skipping migrations table');
+                } else {
+                    $items[] = $name;
+                }
             }
+            $this->call('iseed', [
+                "tables" => implode(",", $items),
+                "--force" => true,
+            ]);
+        } else {
+            $this->warn('no tables found!');
         }
-        $this->call('iseed', [
-            "tables" => implode(",", $items),
-            "--force" => true,
-        ]);
     }
 }
