@@ -8,6 +8,7 @@
     .gap {
         padding-top: 24px;
     }
+    @if(Auth::user())
     .navbar-default .navbar-nav > li > a.user-nav{
         position: relative;
         padding-left: 48px;
@@ -20,16 +21,24 @@
         border: 1px solid #999;
         background: #efefef;
         padding: 2px;
-        max-width: 26px;
-        max-height: 26px;
+        width: 26px;
+        height: 26px;
+
+        background-image: url({{ root_url(Auth::user()->img('xs')) }});
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
     }
     @media (min-width: 768px) {
         .navbar-default .navbar-nav > li > a.user-nav .navbar-pic{
             top: 12px;
         }
     }
+    @endif
 </style>
-@yield('_style')
 @endsection
 
 @section('_content')
@@ -67,8 +76,13 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ root_url('/login') }}">Login</a></li>
-                            <li><a href="{{ root_url('/register') }}">Register</a></li>
+                            <li>
+                                <a href="{{ root_url('/login') }}">Login</a>
+                            </li>
+                            <li>
+                                <a href="{{ root_url('/register') }}"
+                                >Register</a>
+                            </li>
                         @else
                             <li class="dropdown">
                                 <a
@@ -78,11 +92,11 @@
                                     role="button"
                                     aria-expanded="false"
                                 >
-                                    <img
+                                    <div
                                         class="navbar-pic"
-                                        src="{{ Auth::user()->img() }}"
-                                    >
-                                    {{ Auth::user()->name() }} <span class="caret"></span>
+                                    ></div>
+                                    {{ Auth::user()->name() }}
+                                    <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -93,14 +107,19 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ root_url('/password/change') }}">
+                                        <a
+                                            href="{{
+                                                root_url('/password/change')
+                                            }}"
+                                        >
                                             <i class="fa fa-btn fa-key"></i>
                                             Change Password
                                         </a>
                                     </li>
                                     <li>
                                         <a href="{{ root_url('/logout') }}">
-                                            <i class="fa fa-btn fa-sign-out"></i>
+                                            <i class="fa fa-btn fa-sign-out">
+                                            </i>
                                             Logout
                                         </a>
                                     </li>

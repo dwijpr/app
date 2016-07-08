@@ -22,7 +22,7 @@ class User extends Authenticatable
         'username', 'email',
         'firstname', 'lastname',
         'sex', 'dob', 'occupation',
-        'password',
+        'password', 'img',
     ];
 
     protected $connection = 'base';
@@ -46,8 +46,11 @@ class User extends Authenticatable
         return Carbon::parse($this->dob);
     }
 
-    public function img() {
-        return asset('img/icon-'.config('app.sex')[$this->sex].'.svg');
+    public function img($opt = '') {
+        if ($this->img) {
+            return $this->img.'/'.$opt;
+        }
+        return 'img/icon-'.config('app.sex')[$this->sex].'.svg';
     }
 
     public function name() {
