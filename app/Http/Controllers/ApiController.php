@@ -27,6 +27,7 @@ class ApiController extends Controller
             $data = [];
             foreach ($images as $k => $image) {
                 $srcs = [];
+                $srcs['_'] = '/imgs/'.$image->id;
                 foreach ($this->alts as $_k => $alt) {
                     $srcs[$_k] = '/imgs/'.$image->id.'/'.$_k;
                 }
