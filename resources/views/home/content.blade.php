@@ -46,32 +46,6 @@
                                 "
                             >
                                 <div></div>
-                                <!--
-                                <table>
-                                    <tr>
-                                        <td>
-                                            {{ Html::image(
-                                                '/'.$o->id.'/sm', $o->name, [
-                                                    'class' => 'img-item'
-                                                ]
-                                            ) }}
-                                            {{ Form::open([
-                                                'url' => $o->id,
-                                                'method' => 'DELETE',
-                                                'class' => 'img-delete'
-                                            ]) }}
-                                                <a
-                                                    href="javascript:"
-                                                    class="no"
-                                                    onclick="confirmSubmit(this)"
-                                                >
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                            {{ Form::close() }}
-                                        </td>
-                                    </tr>
-                                </table>
-                                -->
                             </div>
                         @endforeach
                     </div>

@@ -11,6 +11,11 @@
 |
 */
 
+$router->get('/api/{user}', [
+    'uses' => 'ApiController@index',
+    'middleware' => 'auth',
+]);
+
 Route::get('/', function () {
     return view('welcome');
 });

@@ -53,35 +53,6 @@
     height: 100%;
     border: 1px solid #f4f4f4;
 }
-
-/*
-.img table {
-    width: 100%;
-}
-.img table td {
-    text-align: center;
-    vertical-align: middle;
-    padding: 0;
-}
-.img-item {
-    display: inline-block;
-    margin: 0 auto;
-    max-width: 100%;
-    max-height: 128px;
-    border: 1px solid #bbb;
-    opacity: .7;
-}
-.img:hover .img-item {
-    opacity: 1;
-}
-.img-delete {
-    display: none;
-    position: absolute;
-}
-.img table td:hover .img-delete {
-    display: inline;
-}
-*/
 </style>
 @endsection
 
