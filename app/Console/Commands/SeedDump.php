@@ -55,7 +55,7 @@ class SeedDump extends Command
                 if (in_array($name, $skips)) {
                     $this->line("!! skipping $name table");
                 } else {
-                    $items[] = $name;
+                    $items[] = str_replace($prefix, '', $name);
                 }
             }
             $this->call('iseed', [
