@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('_style')
+@section('style')
+@parent
 <style>
 .add-image-container {
     padding: 16px 2px;
