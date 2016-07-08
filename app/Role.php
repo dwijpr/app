@@ -10,6 +10,8 @@ class Role extends Model
         'name', 'label',
     ];
 
+    protected $connection = 'base';
+
     public function users() {
         return $this->belongsToMany(User::class);
     }
