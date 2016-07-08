@@ -52,6 +52,8 @@
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ root_url('/') }}">
                         {{ config('app.base.name') }}
+                        |
+                        {{ config('app.name') }}
                     </a>
                 </div>
 

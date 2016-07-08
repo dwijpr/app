@@ -10,4 +10,6 @@ class Log extends Model
         'user_id', 'key', 'uri', 'method', 'user_agent',
         'ip_address', 'app', 'data',
     ];
+
+    protected $connection = 'base';
 }
