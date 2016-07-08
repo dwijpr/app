@@ -19,6 +19,8 @@ class User extends Authenticatable
         'password',
     ];
 
+    protected $connection = 'base';
+
     /**
      * The attributes that should be hidden for arrays.
      *
