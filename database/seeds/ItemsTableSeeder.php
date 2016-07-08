@@ -497,6 +497,22 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-08 13:49:30',
                 'deleted_at' => NULL,
             ),
+            60 => 
+            array (
+                'id' => 61,
+                'name' => 'Sari Roti - Roti Sobek isi Coklat Keju',
+                'created_at' => '2016-07-08 18:39:52',
+                'updated_at' => '2016-07-08 18:39:52',
+                'deleted_at' => NULL,
+            ),
+            61 => 
+            array (
+                'id' => 62,
+                'name' => 'Saos ABC Bangkok',
+                'created_at' => '2016-07-08 18:40:23',
+                'updated_at' => '2016-07-08 18:40:23',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
