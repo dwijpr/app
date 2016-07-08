@@ -50,10 +50,10 @@ class SeedDump extends Command
                 $name = $table->{'Tables_in_'.$db};
                 $this->line("- ".$name);
                 $skips = [
-                    'migrations', 'logs',
+                    'logs',
                 ];
                 if (in_array($name, $skips)) {
-                    $this->line('!! skipping migrations table');
+                    $this->line("!! skipping $name table");
                 } else {
                     $items[] = $name;
                 }
