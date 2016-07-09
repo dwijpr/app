@@ -3,10 +3,12 @@
 return [
 
     'base' => [
-        'name' => 'Base'
+        'name' => env('APP_BASE_NAME'),
     ],
 
-    'name' => 'App',
+    'name' => env('APP_NAME', 'Base'),
+
+    'fa_icon' => env('APP_FA_ICON', 'globe'),
 
     'dark' => !true,
 
