@@ -529,6 +529,54 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-10 04:09:46',
                 'deleted_at' => NULL,
             ),
+            64 => 
+            array (
+                'id' => 65,
+                'name' => 'KLIKPAY ID',
+                'created_at' => '2016-07-10 11:18:27',
+                'updated_at' => '2016-07-10 11:18:27',
+                'deleted_at' => NULL,
+            ),
+            65 => 
+            array (
+                'id' => 66,
+                'name' => 'ACE-PA-HOUSEHOLD GUARD JAKARTA ID',
+                'created_at' => '2016-07-10 11:19:09',
+                'updated_at' => '2016-07-10 11:19:09',
+                'deleted_at' => NULL,
+            ),
+            66 => 
+            array (
+                'id' => 67,
+                'name' => 'Premi BCA Kredit Life',
+                'created_at' => '2016-07-10 11:19:33',
+                'updated_at' => '2016-07-10 11:19:33',
+                'deleted_at' => NULL,
+            ),
+            67 => 
+            array (
+                'id' => 68,
+                'name' => 'Bea Meterai Lunas',
+                'created_at' => '2016-07-10 11:19:51',
+                'updated_at' => '2016-07-10 11:19:51',
+                'deleted_at' => NULL,
+            ),
+            68 => 
+            array (
+                'id' => 69,
+                'name' => 'Annual Membership Fee - Flash',
+                'created_at' => '2016-07-10 11:20:34',
+                'updated_at' => '2016-07-10 11:20:34',
+                'deleted_at' => NULL,
+            ),
+            69 => 
+            array (
+                'id' => 70,
+                'name' => 'Annual Membership Fee - Visa',
+                'created_at' => '2016-07-10 11:20:45',
+                'updated_at' => '2016-07-10 11:20:45',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
