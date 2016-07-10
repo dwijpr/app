@@ -16,9 +16,14 @@ $router->get('/api/{user}', [
     'middleware' => 'auth',
 ]);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+    'uses' => function () {
+        return view('welcome');
+    },
+    'middleware' => 'guest',
+]);
+
+Route::auth();
 
 $router->get('/home', [
     'uses' => 'HomeController@index',
