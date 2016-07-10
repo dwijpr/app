@@ -577,6 +577,54 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-10 11:20:45',
                 'deleted_at' => NULL,
             ),
+            70 => 
+            array (
+                'id' => 71,
+                'name' => 'Sunlight Sachet Sedang',
+                'created_at' => '2016-07-10 18:13:33',
+                'updated_at' => '2016-07-10 18:13:33',
+                'deleted_at' => NULL,
+            ),
+            71 => 
+            array (
+                'id' => 72,
+                'name' => 'Dove Shampoo Total Damage',
+                'created_at' => '2016-07-10 18:13:58',
+                'updated_at' => '2016-07-10 18:13:58',
+                'deleted_at' => NULL,
+            ),
+            72 => 
+            array (
+                'id' => 73,
+                'name' => 'Hansaplast 1/20 M',
+                'created_at' => '2016-07-10 18:14:23',
+                'updated_at' => '2016-07-10 18:14:23',
+                'deleted_at' => NULL,
+            ),
+            73 => 
+            array (
+                'id' => 74,
+                'name' => 'Counterpain 15gr',
+                'created_at' => '2016-07-10 18:14:44',
+                'updated_at' => '2016-07-10 18:14:44',
+                'deleted_at' => NULL,
+            ),
+            74 => 
+            array (
+                'id' => 75,
+                'name' => 'Betadine Solution',
+                'created_at' => '2016-07-10 18:15:06',
+                'updated_at' => '2016-07-10 18:15:06',
+                'deleted_at' => NULL,
+            ),
+            75 => 
+            array (
+                'id' => 76,
+                'name' => 'Bayar Kos Belakang Terminal Leuwi Panjang',
+                'created_at' => '2016-07-10 18:15:50',
+                'updated_at' => '2016-07-10 18:15:50',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
