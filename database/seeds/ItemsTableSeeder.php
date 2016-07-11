@@ -625,6 +625,22 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-10 18:15:50',
                 'deleted_at' => NULL,
             ),
+            76 => 
+            array (
+                'id' => 77,
+                'name' => 'Nescafe Smvlte',
+                'created_at' => '2016-07-11 19:06:28',
+                'updated_at' => '2016-07-11 19:06:28',
+                'deleted_at' => NULL,
+            ),
+            77 => 
+            array (
+                'id' => 78,
+                'name' => 'Sosro Teh Botol Original 45',
+                'created_at' => '2016-07-11 19:06:57',
+                'updated_at' => '2016-07-11 19:06:57',
+                'deleted_at' => NULL,
+            ),
         ));
         
         

@@ -1458,6 +1458,83 @@ class PaysTableSeeder extends Seeder
                 'created_at' => '2016-07-10 18:15:50',
                 'updated_at' => '2016-07-10 18:15:50',
             ),
+            131 => 
+            array (
+                'id' => 132,
+                'user_id' => 1,
+                'item_id' => 2,
+                'price' => 4000,
+                'datetime' => '2016-07-11 00:00:00',
+                'order' => 1,
+                'created_at' => '2016-07-11 19:05:49',
+                'updated_at' => '2016-07-11 19:05:49',
+            ),
+            132 => 
+            array (
+                'id' => 133,
+                'user_id' => 1,
+                'item_id' => 77,
+                'price' => 8300,
+                'datetime' => '2016-07-11 00:00:00',
+                'order' => 2,
+                'created_at' => '2016-07-11 19:06:28',
+                'updated_at' => '2016-07-11 19:06:28',
+            ),
+            133 => 
+            array (
+                'id' => 134,
+                'user_id' => 1,
+                'item_id' => 78,
+                'price' => 7700,
+                'datetime' => '2016-07-11 00:00:00',
+                'order' => 3,
+                'created_at' => '2016-07-11 19:06:57',
+                'updated_at' => '2016-07-11 19:06:57',
+            ),
+            134 => 
+            array (
+                'id' => 135,
+                'user_id' => 1,
+                'item_id' => 5,
+                'price' => 11000,
+                'datetime' => '2016-07-11 00:00:00',
+                'order' => 6,
+                'created_at' => '2016-07-11 19:07:14',
+                'updated_at' => '2016-07-11 19:08:43',
+            ),
+            135 => 
+            array (
+                'id' => 136,
+                'user_id' => 1,
+                'item_id' => 9,
+                'price' => 20550,
+                'datetime' => '2016-07-11 00:00:00',
+                'order' => 7,
+                'created_at' => '2016-07-11 19:07:30',
+                'updated_at' => '2016-07-11 19:08:40',
+            ),
+            136 => 
+            array (
+                'id' => 137,
+                'user_id' => 1,
+                'item_id' => 4,
+                'price' => 10000,
+                'datetime' => '2016-07-11 00:00:00',
+                'order' => 5,
+                'created_at' => '2016-07-11 19:07:39',
+                'updated_at' => '2016-07-11 19:08:46',
+            ),
+            137 => 
+            array (
+                'id' => 138,
+                'user_id' => 1,
+                'item_id' => 2,
+                'price' => 4000,
+                'datetime' => '2016-07-11 00:00:00',
+                'order' => 4,
+                'created_at' => '2016-07-11 19:08:23',
+                'updated_at' => '2016-07-11 19:08:46',
+            ),
         ));
         
         
