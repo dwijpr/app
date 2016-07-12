@@ -641,6 +641,30 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-11 19:06:57',
                 'deleted_at' => NULL,
             ),
+            78 => 
+            array (
+                'id' => 79,
+                'name' => 'Naik Angkot [Kalapa - Cibaduyut]',
+                'created_at' => '2016-07-12 19:18:50',
+                'updated_at' => '2016-07-12 19:18:50',
+                'deleted_at' => NULL,
+            ),
+            79 => 
+            array (
+                'id' => 80,
+                'name' => 'L&L Water Bottle 730',
+                'created_at' => '2016-07-12 19:20:08',
+                'updated_at' => '2016-07-12 19:20:08',
+                'deleted_at' => NULL,
+            ),
+            80 => 
+            array (
+                'id' => 81,
+                'name' => 'Cilok',
+                'created_at' => '2016-07-12 19:20:18',
+                'updated_at' => '2016-07-12 19:20:18',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
