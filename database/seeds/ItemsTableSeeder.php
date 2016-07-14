@@ -673,6 +673,30 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-14 03:35:55',
                 'deleted_at' => NULL,
             ),
+            82 => 
+            array (
+                'id' => 83,
+                'name' => 'Korek Gas',
+                'created_at' => '2016-07-15 04:14:36',
+                'updated_at' => '2016-07-15 04:14:36',
+                'deleted_at' => NULL,
+            ),
+            83 => 
+            array (
+                'id' => 84,
+                'name' => 'Other',
+                'created_at' => '2016-07-15 04:15:18',
+                'updated_at' => '2016-07-15 04:15:18',
+                'deleted_at' => NULL,
+            ),
+            84 => 
+            array (
+                'id' => 85,
+                'name' => 'Nasi Padang Cincang Telor Dadar',
+                'created_at' => '2016-07-15 04:16:12',
+                'updated_at' => '2016-07-15 04:16:12',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
