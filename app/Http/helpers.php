@@ -1,5 +1,17 @@
 <?php
 
+if (!function_exists('r_script')) {
+    function r_script($path) {
+        return Html::script(root_url($path));
+    }
+}
+
+if (!function_exists('r_style')) {
+    function r_style($path) {
+        return Html::style(root_url($path));
+    }
+}
+
 if (!function_exists('year_months_list')) {
     function year_months_list($end, $start) {
         $end = new DateTime($end->addMonth()->format('Y-m-d'));

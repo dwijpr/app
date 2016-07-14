@@ -12,3 +12,8 @@ ToDos
     - ~~using shorthand 11000 -> 11k (pull-right)~~
 
 - get latest pay price per user input for an item
+        - ~~navbar~~
+
+    - profile index design
+
+- bare test commit
