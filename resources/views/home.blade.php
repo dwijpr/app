@@ -82,20 +82,20 @@
 @endsection
 
 @section('head')
-{{ Html::style(
+{{ r_style(
     '/thirdparty/jquery-ui/1.11.4/jquery-ui.css'
 ) }}
 
-{{ Html::script(
+{{ r_script(
     '/thirdparty/typeahead.js/0.11.1/dist/typeahead.jquery.js'
 ) }}
-{{ Html::script(
+{{ r_script(
     '/thirdparty/Numeral-js/1.5.3/numeral.js'
 ) }}
-{{ Html::script(
+{{ r_script(
     '/thirdparty/jquery-ui/1.11.4/jquery-ui.js'
 ) }}
-{{ Html::script(
+{{ r_script(
     '/thirdparty/masonry/4.1.0/dist/masonry.pkgd.js'
 ) }}
 @endsection
