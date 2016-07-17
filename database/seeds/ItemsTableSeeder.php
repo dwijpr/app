@@ -705,6 +705,30 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-16 14:32:42',
                 'deleted_at' => NULL,
             ),
+            86 => 
+            array (
+                'id' => 87,
+                'name' => 'Ayam Goreng Pedas',
+                'created_at' => '2016-07-17 19:51:45',
+                'updated_at' => '2016-07-17 19:51:45',
+                'deleted_at' => NULL,
+            ),
+            87 => 
+            array (
+                'id' => 88,
+                'name' => 'Usus Goreng',
+                'created_at' => '2016-07-17 19:52:04',
+                'updated_at' => '2016-07-17 19:52:04',
+                'deleted_at' => NULL,
+            ),
+            88 => 
+            array (
+                'id' => 89,
+                'name' => '2 Blibis Saus Cabe 135gr',
+                'created_at' => '2016-07-17 19:52:48',
+                'updated_at' => '2016-07-17 19:52:48',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
