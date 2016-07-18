@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('refresh-csrf', function () {
+    return csrf_token();
+});
 $router->get('/api/{user}', [
     'uses' => 'ApiController@index',
     'middleware' => 'auth',

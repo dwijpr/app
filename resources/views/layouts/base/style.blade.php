@@ -78,4 +78,11 @@
     .square {
         border-radius: 0;
     }
+    .clipboard {
+        cursor: copy;
+        text-shadow: 1px 1px #e6e6e6;
+    }
+    .monospace {
+        font-family: monospace;
+    }
 </style>
