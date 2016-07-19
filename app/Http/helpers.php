@@ -1,5 +1,37 @@
 <?php
 
+if (!function_exists('styles')) {
+    function styles($r_paths) {
+        $tags = [];
+        foreach ($r_paths as $r_path) {
+            $tags[] = r_style($r_path);
+        }
+        return implode("\n", $tags);
+    }
+}
+
+if (!function_exists('scripts')) {
+    function scripts($r_paths) {
+        $tags = [];
+        foreach ($r_paths as $r_path) {
+            $tags[] = r_script($r_path);
+        }
+        return implode("\n", $tags);
+    }
+}
+
+if (!function_exists('r_script')) {
+    function r_script($path) {
+        return Html::script(root_url($path));
+    }
+}
+
+if (!function_exists('r_style')) {
+    function r_style($path) {
+        return Html::style(root_url($path));
+    }
+}
+
 if (!function_exists('l')) {
     function l($key, $object = []) {
         $stringObject = json_encode($object);
