@@ -29,7 +29,7 @@ class DartController extends Controller
      */
     public function create()
     {
-        //
+        return view('dart.create');
     }
 
     /**
@@ -40,7 +40,15 @@ class DartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'body' => 'required|min:140',
+        ]);
+        $request->user()->darts()->create([
+            'title' => $request->title,
+            'body' => $request->body,
+        ]);
+        return redirect('/dart');
     }
 
     /**
@@ -60,9 +68,11 @@ class DartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Dart $dart)
     {
-        //
+        return view('dart.edit', [
+            'dart' => $dart,
+        ]);
     }
 
     /**
@@ -72,9 +82,17 @@ class DartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Dart $dart)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'body' => 'required|min:140',
+        ]);
+        $dart->update([
+            'title' => $request->title,
+            'body' => $request->body,
+        ]);
+        return redirect('/dart');
     }
 
     /**
@@ -83,8 +101,9 @@ class DartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Dart $dart)
     {
-        //
+        $dart->delete();
+        return redirect('/dart');
     }
 }

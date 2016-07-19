@@ -76,4 +76,8 @@ class User extends Authenticatable
         }
         return $this->hasRole($roles);
     }
+
+    public function darts() {
+        return $this->hasMany(Dart::class);
+    }
 }

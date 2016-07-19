@@ -23,7 +23,11 @@
                         <td>{{ $i+1 }}</td>
                         <td>{{ $dart->user->email }}</td>
                         <td>{{ $dart->title }}</td>
-                        <td>{{ $dart->body }}</td>
+                        <td style="max-width: 196px;">
+                            <div class="truncate">
+                                {{ $dart->body }}
+                            </div>
+                        </td>
                         <td>
                             <a
                                 href="{{ url('/dart/'.$dart->id.'/edit') }}"
