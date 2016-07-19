@@ -28,3 +28,9 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+
+$router->group([
+    'middleware' => 'auth',
+], function ($router) {
+        $router->resource('/dart', 'DartController');
+});

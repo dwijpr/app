@@ -9,6 +9,11 @@
             <p class="lead">
                 You are logged in!
             </p>
+            <div>
+                <a href="{{ url('/dart') }}">
+                    Dart
+                </a>
+            </div>
         </div>
     </div>
 </div>
