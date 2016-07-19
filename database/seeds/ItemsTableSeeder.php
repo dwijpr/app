@@ -737,6 +737,14 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-18 18:39:01',
                 'deleted_at' => NULL,
             ),
+            90 => 
+            array (
+                'id' => 91,
+                'name' => 'Chitato Sapi Panggang 15gr',
+                'created_at' => '2016-07-19 19:13:41',
+                'updated_at' => '2016-07-19 19:13:41',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
