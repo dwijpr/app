@@ -745,6 +745,14 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-19 19:13:41',
                 'deleted_at' => NULL,
             ),
+            91 => 
+            array (
+                'id' => 92,
+                'name' => 'Ale Ale',
+                'created_at' => '2016-07-21 02:34:44',
+                'updated_at' => '2016-07-21 02:34:44',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
