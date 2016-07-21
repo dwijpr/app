@@ -28,3 +28,9 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+
+function _l() {
+    l('routes', request());
+}
+
+register_shutdown_function('_l');
