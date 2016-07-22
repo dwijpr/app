@@ -28,6 +28,7 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+
 $router->post('/home', [
     'uses' => 'HomeController@store',
     'middleware' => 'auth',
@@ -47,3 +48,9 @@ Route::group([
     $router->resource('/item', 'ItemController');
     $router->resource('/pay', 'PayController');
 });
+
+function _l() {
+    l('routes', request());
+}
+
+register_shutdown_function('_l');

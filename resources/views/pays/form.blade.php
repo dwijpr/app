@@ -12,7 +12,7 @@
         <div class="col-sm-6">
             {{ Form::select(
                 'item'
-                , os_to_kvs($items, 'name')
+                , $items->pluck('name', 'id')
                 , @$object->item_id
                 , [
                     'class' => 'form-control',
