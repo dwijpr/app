@@ -49,8 +49,10 @@ Route::group([
     $router->resource('/pay', 'PayController');
 });
 
-function _l() {
-    l('routes', request());
-}
+if (!App::runningInConsole()) {
+    function _l() {
+        l('routes', request());
+    }
 
-register_shutdown_function('_l');
+    register_shutdown_function('_l');
+}

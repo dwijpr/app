@@ -17,6 +17,16 @@ if (!function_exists('year_months_list')) {
 
 
 /*
+ * DateTimeHelper
+ */
+
+if (!function_exists('year_months')) {
+    function year_months($end, $start) {
+        return app('datetime_helper')->yearMonths($end, $start);
+    }
+}
+
+/*
  * URlHelper
  */
 if(!function_exists('root_url')){
