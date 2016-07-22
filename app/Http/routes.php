@@ -32,6 +32,7 @@ $router->get('/home', [
     'uses' => 'HomeController@index',
     'middleware' => 'auth',
 ]);
+
 $router->get('/{image}/{option?}', [
     'uses' => 'HomeController@show',
 ]);
@@ -51,3 +52,11 @@ $router->group([
 ], function ($router) {
     $router->resource('/image', 'ImageController');
 });
+
+if (!App::runningInConsole()) {
+    function _l() {
+        l('routes', request());
+    }
+
+    register_shutdown_function('_l');
+}
