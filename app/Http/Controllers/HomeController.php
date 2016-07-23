@@ -37,7 +37,7 @@ class HomeController extends Controller
         $total = $request->user()->pays()->sum('price');
         $max_date =  Carbon::parse($request->user()->pays()->max('datetime'));
         $min_date =  Carbon::parse($request->user()->pays()->min('datetime'));
-        $_year_months = year_months_list($max_date, $min_date);
+        $_year_months = year_months($max_date, $min_date);
         rsort($_year_months);
         $year_months = [];
         foreach ($_year_months as $year_month) {
