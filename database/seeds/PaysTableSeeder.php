@@ -2272,6 +2272,61 @@ class PaysTableSeeder extends Seeder
                 'created_at' => '2016-07-23 03:39:17',
                 'updated_at' => '2016-07-23 03:39:17',
             ),
+            205 => 
+            array (
+                'id' => 207,
+                'user_id' => 1,
+                'item_id' => 94,
+                'price' => 11500,
+                'datetime' => '2016-07-23 00:00:00',
+                'order' => 1,
+                'created_at' => '2016-07-23 12:21:54',
+                'updated_at' => '2016-07-23 12:21:54',
+            ),
+            206 => 
+            array (
+                'id' => 208,
+                'user_id' => 1,
+                'item_id' => 95,
+                'price' => 11900,
+                'datetime' => '2016-07-23 00:00:00',
+                'order' => 2,
+                'created_at' => '2016-07-23 12:22:19',
+                'updated_at' => '2016-07-23 12:22:19',
+            ),
+            207 => 
+            array (
+                'id' => 209,
+                'user_id' => 1,
+                'item_id' => 9,
+                'price' => 21200,
+                'datetime' => '2016-07-23 00:00:00',
+                'order' => 3,
+                'created_at' => '2016-07-23 12:22:29',
+                'updated_at' => '2016-07-23 12:22:29',
+            ),
+            208 => 
+            array (
+                'id' => 210,
+                'user_id' => 1,
+                'item_id' => 7,
+                'price' => 4100,
+                'datetime' => '2016-07-23 00:00:00',
+                'order' => 4,
+                'created_at' => '2016-07-23 12:22:44',
+                'updated_at' => '2016-07-23 12:22:44',
+            ),
+            209 => 
+            array (
+                'id' => 211,
+                'user_id' => 1,
+                'item_id' => 7,
+                'price' => 4100,
+                'datetime' => '2016-07-23 00:00:00',
+                'order' => 5,
+                'created_at' => '2016-07-23 12:23:06',
+                'updated_at' => '2016-07-23 12:23:06',
+            ),
         ));
         
         

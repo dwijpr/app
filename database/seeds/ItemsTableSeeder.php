@@ -761,6 +761,22 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-23 03:39:17',
                 'deleted_at' => NULL,
             ),
+            93 => 
+            array (
+                'id' => 94,
+                'name' => 'Happy Tos Tortilla Chips',
+                'created_at' => '2016-07-23 12:21:54',
+                'updated_at' => '2016-07-23 12:21:54',
+                'deleted_at' => NULL,
+            ),
+            94 => 
+            array (
+                'id' => 95,
+                'name' => 'Indocafe Coffemix 10s',
+                'created_at' => '2016-07-23 12:22:19',
+                'updated_at' => '2016-07-23 12:22:19',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
