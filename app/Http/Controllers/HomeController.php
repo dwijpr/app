@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\User, App\Image, Image as IntImage;
+use Storage;
 
 class HomeController extends Controller
 {
@@ -28,12 +29,12 @@ class HomeController extends Controller
     }
 
     public function destroy(Image $image) {
-        storage()->delete($image->storage);
+        Storage::delete($image->storage);
         $path = $image->storage;
         $ext = pathinfo($path, PATHINFO_EXTENSION);
         foreach ($this->alts as $key => $alt) {
-            storage()->delete(implode('.', [
-                no_ext($path),
+            Storage::delete(implode('.', [
+                strip_ext($path),
                 $key,
                 $ext,
             ]));
@@ -47,13 +48,13 @@ class HomeController extends Controller
         if (in_array($option, array_keys($this->alts))) {
             $ext = pathinfo($path, PATHINFO_EXTENSION);
             $path = implode('.', [
-                no_ext($path),
+                strip_ext($path),
                 $option,
                 $ext,
             ]);
         }
-        $file = storage()->get($path);
-        $mime = storage()->mimeType($path);
+        $file = Storage::get($path);
+        $mime = Storage::mimeType($path);
         return response($file, 200, [
             'Content-type' => $mime,
         ]);
@@ -67,11 +68,11 @@ class HomeController extends Controller
         $file = $request->file('image');
         $filename = $file->getFilename()
             .'.'.$file->getClientOriginalExtension();
-        storage()->put($filename, file_get_contents($file->getRealPath()));
+        Storage::put($filename, file_get_contents($file->getRealPath()));
 
         $image = Image::create([
             'user_id' => $request->user()->id,
-            'name' => no_ext($file->getClientOriginalName()),
+            'name' => strip_ext($file->getClientOriginalName()),
             'storage' => $filename,
         ]);
         $this->makeAlts($file);
