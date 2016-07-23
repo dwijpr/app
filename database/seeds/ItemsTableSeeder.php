@@ -777,6 +777,14 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-23 12:22:19',
                 'deleted_at' => NULL,
             ),
+            95 => 
+            array (
+                'id' => 96,
+                'name' => 'Ayam Goreng Original',
+                'created_at' => '2016-07-23 19:22:22',
+                'updated_at' => '2016-07-23 19:22:22',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
