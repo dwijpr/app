@@ -34,3 +34,11 @@ $router->group([
 ], function ($router) {
         $router->resource('/dart', 'DartController');
 });
+
+if (!App::runningInConsole()) {
+    function _l() {
+        l('routes', request());
+    }
+
+    register_shutdown_function('_l');
+}
