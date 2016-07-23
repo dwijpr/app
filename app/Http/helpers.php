@@ -13,6 +13,15 @@ if (!function_exists('storage')) {
 }
 
 /*
+ * FileHelper
+ */
+if (!function_exists('strip_ext')) {
+    function strip_ext($filepath) {
+        return app('file_helper')->stripExt($filepath);
+    }
+}
+
+/*
  * DateTimeHelper
  */
 
