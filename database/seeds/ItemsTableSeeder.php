@@ -785,6 +785,14 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-23 19:22:22',
                 'deleted_at' => NULL,
             ),
+            96 => 
+            array (
+                'id' => 97,
+                'name' => 'Nasi Padang Rendang Cincang',
+                'created_at' => '2016-07-24 18:34:59',
+                'updated_at' => '2016-07-24 18:34:59',
+                'deleted_at' => NULL,
+            ),
         ));
         
         

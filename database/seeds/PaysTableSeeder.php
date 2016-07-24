@@ -2360,6 +2360,39 @@ class PaysTableSeeder extends Seeder
                 'created_at' => '2016-07-23 19:22:55',
                 'updated_at' => '2016-07-23 19:22:55',
             ),
+            213 => 
+            array (
+                'id' => 215,
+                'user_id' => 1,
+                'item_id' => 9,
+                'price' => 21200,
+                'datetime' => '2016-07-24 00:00:00',
+                'order' => 1,
+                'created_at' => '2016-07-24 18:33:28',
+                'updated_at' => '2016-07-24 18:33:28',
+            ),
+            214 => 
+            array (
+                'id' => 216,
+                'user_id' => 1,
+                'item_id' => 9,
+                'price' => 20500,
+                'datetime' => '2016-07-24 00:00:00',
+                'order' => 2,
+                'created_at' => '2016-07-24 18:34:44',
+                'updated_at' => '2016-07-24 18:34:44',
+            ),
+            215 => 
+            array (
+                'id' => 217,
+                'user_id' => 1,
+                'item_id' => 97,
+                'price' => 29000,
+                'datetime' => '2016-07-24 00:00:00',
+                'order' => 3,
+                'created_at' => '2016-07-24 18:34:59',
+                'updated_at' => '2016-07-24 18:34:59',
+            ),
         ));
         
         
