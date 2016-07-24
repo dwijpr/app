@@ -47,6 +47,7 @@ class DartController extends Controller
         $request->user()->darts()->create([
             'title' => $request->title,
             'body' => $request->body,
+            'cover' => $request->cover,
         ]);
         return redirect('/dart');
     }
@@ -91,6 +92,7 @@ class DartController extends Controller
         $dart->update([
             'title' => $request->title,
             'body' => $request->body,
+            'cover' => $request->cover,
         ]);
         return redirect('/dart');
     }

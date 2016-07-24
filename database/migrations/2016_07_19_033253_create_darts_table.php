@@ -16,6 +16,7 @@ class CreateDartsTable extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->string('title');
+            $table->string('cover');
             $table->text('body');
             $table->timestamps();
         });

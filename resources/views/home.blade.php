@@ -13,7 +13,8 @@
             <div class="row masonry-container">
                 @foreach($darts as $dart)
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                    <h3>{{ $dart->title }}</h3>
+                    <h3>{!! $dart->title() !!}</h3>
+                    <hr>
                     {!! $dart->body() !!}
                 </div>
                 @endforeach
