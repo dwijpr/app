@@ -38,7 +38,8 @@
                 <div class="col-md-12">
                     <div class="row">
                         @foreach($objects as $o)
-                            <div
+                            <a
+                                href="{{ url('/view/'.$o->id) }}"
                                 class="col-xs-4 img"
                                 style="
                                     background-image:
@@ -46,7 +47,7 @@
                                 "
                             >
                                 <div></div>
-                            </div>
+                            </a>
                         @endforeach
                     </div>
                 </div>

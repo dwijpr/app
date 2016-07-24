@@ -14,6 +14,12 @@ class HomeController extends Controller
         'sm' => 128,
         'md' => 256,
     ];
+
+    public function view(Image $image) {
+        return view('image', [
+            'image' => $image,
+        ]);
+    }
     /**
      * Show the application dashboard.
      *

@@ -33,6 +33,8 @@ $router->get('/home', [
     'middleware' => 'auth',
 ]);
 
+$router->get('/view/{image}', 'HomeController@view');
+
 $router->get('/{image}/{option?}', [
     'uses' => 'HomeController@show',
 ]);
@@ -43,15 +45,6 @@ $router->post('/home', [
     'uses' => 'HomeController@store',
     'middleware' => 'auth',
 ]);
-
-$router->group([
-    'middleware' => [
-        'auth', 'roles',
-    ],
-    'roles' => 'admin',
-], function ($router) {
-    $router->resource('/image', 'ImageController');
-});
 
 if (!App::runningInConsole()) {
     function _l() {
