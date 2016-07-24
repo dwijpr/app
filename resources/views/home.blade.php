@@ -17,8 +17,22 @@
         padding: 8px;
     }
     .dart {
+        position: relative;
         border: 1px solid rgba(0, 0, 0, .1);
         padding: 16px;
+    }
+    .dart-cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 128px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
     }
 </style>
 @endsection
@@ -38,8 +52,25 @@
                 <div
                     class="col-xs-12 col-sm-6 col-md-4 col-lg-4 dart-wrapper"
                 >
-                    <div class="dart">
-                        <h3>{!! $dart->title() !!}</h3>
+                    <div
+                        class="dart"
+                        @if(@$dart->cover)
+                        style="
+                            padding-top: 128px;
+                        "
+                        @endif
+                    >
+                        @if(@$dart->cover)
+                        <div
+                            class="dart-cover"
+                            style="
+                                background-image: url({{ root_url(
+                                    $dart->cover.'/md'
+                                ) }});
+                            "
+                        ></div>
+                        @endif
+                        <h3 class="text-center">{!! $dart->title() !!}</h3>
                         <hr>
                         <div class="lead-text">
                             {!! $dart->body() !!}
