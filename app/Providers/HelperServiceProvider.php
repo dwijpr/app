@@ -10,6 +10,7 @@ use App\Http\Helpers\URLHelper;
 use App\Http\Helpers\DateTimeHelper;
 use App\Http\Helpers\FileHelper;
 use App\Http\Helpers\MDHelper;
+use App\Http\Helpers\HtmlHelper;
 
 class HelperServiceProvider extends ServiceProvider
 {
@@ -30,6 +31,7 @@ class HelperServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->registerHtmlHelper();
         $this->registerMDHelper();
         $this->registerFileHelper();
         $this->registerDateTimeHelper();
@@ -37,6 +39,12 @@ class HelperServiceProvider extends ServiceProvider
         $this->registerLogHelper();
         $this->registerAssetHelper();
         $this->registerStringHelper();
+    }
+
+    private function registerHtmlHelper() {
+        $this->app->singleton('html_helper', function ($app) {
+            return new HtmlHelper();
+        });
     }
 
     private function registerMDHelper() {
