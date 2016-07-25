@@ -3,16 +3,6 @@
 @section('style')
 @parent
 <style>
-    .lead-text {
-        display: block; /* Fallback for non-webkit */
-        display: -webkit-box;
-        height: 82px; /* Fallback for non-webkit */
-        margin: 0 auto;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
     .dart-wrapper {
         padding: 8px;
     }
@@ -26,7 +16,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 128px;
+        height: 156px;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -56,7 +46,7 @@
                         class="dart"
                         @if(@$dart->cover)
                         style="
-                            padding-top: 128px;
+                            padding-top: 156px;
                         "
                         @endif
                     >
@@ -73,7 +63,7 @@
                         <h3 class="text-center">{!! $dart->title() !!}</h3>
                         <hr>
                         <div class="lead-text">
-                            {!! $dart->body() !!}
+                            {!! $dart->bodyFirstP() !!}
                         </div>
                     </div>
                 </div>

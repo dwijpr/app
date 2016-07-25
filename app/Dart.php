@@ -22,4 +22,8 @@ class Dart extends Model
     public function body() {
         return md_to_html($this->body);
     }
+
+    public function bodyFirstP() {
+        return get_first_p($this->body());
+    }
 }
