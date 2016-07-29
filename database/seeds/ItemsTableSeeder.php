@@ -801,6 +801,30 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-29 03:09:24',
                 'deleted_at' => NULL,
             ),
+            98 => 
+            array (
+                'id' => 99,
+                'name' => 'Tri 10GB Download Package',
+                'created_at' => '2016-07-30 03:36:14',
+                'updated_at' => '2016-07-30 03:36:14',
+                'deleted_at' => NULL,
+            ),
+            99 => 
+            array (
+                'id' => 100,
+                'name' => 'Ale Ale Sirsak',
+                'created_at' => '2016-07-30 03:37:25',
+                'updated_at' => '2016-07-30 03:37:25',
+                'deleted_at' => NULL,
+            ),
+            100 => 
+            array (
+                'id' => 101,
+                'name' => 'Chitato SP PGG',
+                'created_at' => '2016-07-30 03:42:07',
+                'updated_at' => '2016-07-30 03:42:07',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
