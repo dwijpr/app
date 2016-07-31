@@ -825,6 +825,126 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2016-07-30 03:42:07',
                 'deleted_at' => NULL,
             ),
+            101 => 
+            array (
+                'id' => 102,
+                'name' => 'Naik Angkot [Cijerah - Ciwastra]',
+                'created_at' => '2016-08-01 03:30:27',
+                'updated_at' => '2016-08-01 03:30:27',
+                'deleted_at' => NULL,
+            ),
+            102 => 
+            array (
+                'id' => 103,
+                'name' => 'Happy Tos Corn Chips',
+                'created_at' => '2016-08-01 03:40:14',
+                'updated_at' => '2016-08-01 03:40:14',
+                'deleted_at' => NULL,
+            ),
+            103 => 
+            array (
+                'id' => 104,
+                'name' => 'Axe Deodorant SPR SCR 150',
+                'created_at' => '2016-08-01 03:41:11',
+                'updated_at' => '2016-08-01 03:41:11',
+                'deleted_at' => NULL,
+            ),
+            104 => 
+            array (
+                'id' => 105,
+                'name' => 'Lifebuoy Mild Care 110',
+                'created_at' => '2016-08-01 03:41:47',
+                'updated_at' => '2016-08-01 03:41:47',
+                'deleted_at' => NULL,
+            ),
+            105 => 
+            array (
+                'id' => 106,
+                'name' => 'Pepsodent White 75gr',
+                'created_at' => '2016-08-01 03:42:11',
+                'updated_at' => '2016-08-01 03:42:11',
+                'deleted_at' => NULL,
+            ),
+            106 => 
+            array (
+                'id' => 107,
+                'name' => 'Pocari Sweat 350ml',
+                'created_at' => '2016-08-01 03:45:05',
+                'updated_at' => '2016-08-01 03:45:05',
+                'deleted_at' => NULL,
+            ),
+            107 => 
+            array (
+                'id' => 108,
+                'name' => 'Cricket Solid Mini',
+                'created_at' => '2016-08-01 03:46:05',
+                'updated_at' => '2016-08-01 03:46:05',
+                'deleted_at' => NULL,
+            ),
+            108 => 
+            array (
+                'id' => 109,
+                'name' => 'Tira Jeans',
+                'created_at' => '2016-08-01 03:46:53',
+                'updated_at' => '2016-08-01 03:46:53',
+                'deleted_at' => NULL,
+            ),
+            109 => 
+            array (
+                'id' => 110,
+                'name' => 'Jkh BSC KT KGRU JDK6',
+                'created_at' => '2016-08-01 03:47:35',
+                'updated_at' => '2016-08-01 03:47:35',
+                'deleted_at' => NULL,
+            ),
+            110 => 
+            array (
+                'id' => 111,
+                'name' => 'Super - T Shirt',
+                'created_at' => '2016-08-01 03:48:32',
+                'updated_at' => '2016-08-01 03:48:32',
+                'deleted_at' => NULL,
+            ),
+            111 => 
+            array (
+                'id' => 112,
+                'name' => 'Sony Earphone MDR E9LP',
+                'created_at' => '2016-08-01 03:50:48',
+                'updated_at' => '2016-08-01 03:50:48',
+                'deleted_at' => NULL,
+            ),
+            112 => 
+            array (
+                'id' => 113,
+                'name' => 'Ergobelt Multipurpose Activity Belt',
+                'created_at' => '2016-08-01 03:51:44',
+                'updated_at' => '2016-08-01 03:51:44',
+                'deleted_at' => NULL,
+            ),
+            113 => 
+            array (
+                'id' => 114,
+                'name' => 'Sarung Gajah Duduk Shafira',
+                'created_at' => '2016-08-01 03:52:14',
+                'updated_at' => '2016-08-01 03:52:14',
+                'deleted_at' => NULL,
+            ),
+            114 => 
+            array (
+                'id' => 115,
+                'name' => 'Tiket Kereta Bandung - Gambir',
+                'created_at' => '2016-08-01 03:54:58',
+                'updated_at' => '2016-08-01 03:54:58',
+                'deleted_at' => NULL,
+            ),
+            115 => 
+            array (
+                'id' => 116,
+                'name' => 'Tiket Kereta Gambir - Bandung',
+                'created_at' => '2016-08-01 03:55:30',
+                'updated_at' => '2016-08-01 03:55:30',
+                'deleted_at' => NULL,
+            ),
         ));
         
         
