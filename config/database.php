@@ -78,7 +78,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
-            'prefix' => env('DB_PREFIX', '_'),
+            'prefix' => env('DB_PREFIX', strtolower(env('APP_NAME')).'_'),
             'strict' => false,
             'engine' => null,
         ],
