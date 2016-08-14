@@ -34,13 +34,13 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="row masonry-container">
+        <div class="col-md-12">
+            <div class="row masonry-container" style="max-width: 100%;">
                 @foreach($darts as $dart)
                 <div
-                    class="col-xs-12 col-sm-6 col-md-4 col-lg-4 dart-wrapper"
+                    class="col-xs-12 col-sm-6 col-md-4 col-lg-3 dart-wrapper"
                 >
                     <div
                         class="dart"
