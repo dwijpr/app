@@ -20,7 +20,7 @@
         background: white;
         padding: 16px;
     }
-    .dart-cover {
+    .dart-cover, .dart-user-img {
         position: absolute;
         top: 0;
         left: 0;
@@ -32,6 +32,29 @@
         background-size: cover;
         background-position: 50% 50%;
         background-repeat: no-repeat;
+    }
+    .dart-cover {
+        width: 100%;
+        height: 156px;
+    }
+    .dart-user-img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        top: 4px;
+    }
+    .dart-header {
+        display: table;
+    }
+    .dart-header .cell {
+        display: table-cell;
+    }
+    .cell.cell-img {
+        position: relative;
+        width: 48px;
+    }
+    .dart-header img {
+        width: 48px;
     }
 </style>
 @endsection
@@ -55,6 +78,26 @@
                                 "
                                 @endif
                             >
+                                <div class="dart-header">
+                                    <div class="cell cell-img">
+                                        <div
+                                            class="dart-user-img"
+                                            style="background-image: url({{
+                                                $dart->user->img('xs')
+                                            }})"
+                                        ></div>
+                                    </div>
+                                    <div class="cell">
+                                        <div>
+                                            {{ $dart->user->name() }}
+                                            <span class="text-muted">in</span>
+                                            Technology
+                                        </div>
+                                        <div class="text-muted">
+                                            2 days ago
+                                        </div>
+                                    </div>
+                                </div>
                                 @if(@$dart->cover)
                                 <a href="#">
                                 <div
