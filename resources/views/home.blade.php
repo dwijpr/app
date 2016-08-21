@@ -3,12 +3,21 @@
 @section('style')
 @parent
 <style>
+    body {
+        background: #fafafa;
+    }
+
+    .navbar-default {
+        background: white;
+    }
     .dart-wrapper {
         padding: 8px;
     }
     .dart {
         position: relative;
         border: 1px solid rgba(0, 0, 0, .1);
+        border-radius: 4px;
+        background: white;
         padding: 16px;
     }
     .dart-cover {
@@ -27,59 +36,53 @@
 </style>
 @endsection
 
-@section('head')
-{{ r_script(
-    '/thirdparty/masonry/4.1.0/dist/masonry.pkgd.js'
-) }}
-@endsection
-
 @section('content')
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="row masonry-container" style="max-width: 100%;">
-                @foreach($darts as $dart)
-                <div
-                    class="col-xs-12 col-sm-6 col-md-4 col-lg-3 dart-wrapper"
-                >
-                    <div
-                        class="dart"
-                        @if(@$dart->cover)
-                        style="
-                            padding-top: 156px;
-                        "
-                        @endif
-                    >
-                        @if(@$dart->cover)
+        <div class="col-md-10 col-md-offset-1">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row masonry-container">
+                        @foreach($darts as $dart)
                         <div
-                            class="dart-cover"
-                            style="
-                                background-image: url({{ root_url(
-                                    $dart->cover.'/md'
-                                ) }});
-                            "
-                        ></div>
-                        @endif
-                        <h3 class="text-center">{!! $dart->title() !!}</h3>
-                        <hr>
-                        <div class="lead-text">
-                            {!! $dart->bodyFirstP() !!}
+                            class="col-xs-12 dart-wrapper"
+                        >
+                            <div
+                                class="dart"
+                                @if(@$dart->cover)
+                                style="
+                                    padding-top: 156px;
+                                "
+                                @endif
+                            >
+                                @if(@$dart->cover)
+                                <a href="#">
+                                <div
+                                    class="dart-cover"
+                                    style="
+                                        background-image: url({{ root_url(
+                                            $dart->cover.'/md'
+                                        ) }});
+                                    "
+                                ></div>
+                                </a>
+                                @endif
+                                <h3 class="text-center">
+                                    <a href="#">
+                                        {!! $dart->title() !!}
+                                    </a>
+                                </h3>
+                                <hr>
+                                <div class="lead-text">
+                                    {!! $dart->bodyFirstP() !!}
+                                </div>
+                            </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
-                @endforeach
             </div>
         </div>
     </div>
 </div>
-@endsection
-
-@section('script')
-<script>
-$(function() {
-    if ($('.masonry-container').length > 0) {
-        var msnry = new Masonry('.masonry-container');
-    }
-});
-</script>
 @endsection

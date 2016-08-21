@@ -3,7 +3,7 @@
 @section('style')
 <style>
     body {
-        padding-top: 50px;
+        padding-top: 128px;
     }
     .gap {
         padding-top: 24px;
@@ -38,6 +38,17 @@
         }
     }
     @endif
+    .navbar hr {
+        margin: 8px 0 4px;
+        border-color: #ddd;
+    }
+    .top-tags * {
+        font-weight: 300;
+        padding-bottom: 4px;
+    }
+    .top-tags a {
+        padding-right: 12px;
+    }
 </style>
 @endsection
 
@@ -45,9 +56,9 @@
 <nav class="navbar navbar-{{ config(
     'app.dark'
 )?'inverse':'default' }} navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-10 col-md-offset-1">
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
@@ -138,6 +149,15 @@
                             </li>
                         @endif
                     </ul>
+                </div>
+                <hr>
+                <div class="top-tags">
+                    <h4>
+                        <a href="#">Epic</a>
+                        <a href="#">Story</a>
+                        <a href="#">Task</a>
+                        <a href="#">Todo</a>
+                    </h4>
                 </div>
             </div>
         </div>
