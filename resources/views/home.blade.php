@@ -24,8 +24,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 156px;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -33,10 +31,10 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
     }
-    .dart-cover {
+    /*.dart-cover {
         width: 100%;
         height: 156px;
-    }
+    }*/
     .dart-user-img {
         width: 32px;
         height: 32px;
@@ -56,6 +54,19 @@
     .dart-header img {
         width: 48px;
     }
+
+    .middotDivider {
+        padding-right: .45em;
+        padding-left: .45em;
+    }
+    .middotDivider::after {
+        content: "·";
+    }
+
+    .dart-img {
+        max-height: 186px;
+        max-width: 100%;
+    }
 </style>
 @endsection
 
@@ -72,11 +83,6 @@
                         >
                             <div
                                 class="dart"
-                                @if(@$dart->cover)
-                                style="
-                                    padding-top: 156px;
-                                "
-                                @endif
                             >
                                 <div class="dart-header">
                                     <div class="cell cell-img">
@@ -95,27 +101,26 @@
                                         </div>
                                         <div class="text-muted">
                                             2 days ago
+                                            <span class="middotDivider"></span>
+                                            6 min read
                                         </div>
                                     </div>
                                 </div>
                                 @if(@$dart->cover)
                                 <a href="#">
-                                <div
-                                    class="dart-cover"
-                                    style="
-                                        background-image: url({{ root_url(
-                                            $dart->cover.'/md'
-                                        ) }});
-                                    "
-                                ></div>
+                                <img
+                                    class="dart-img"
+                                    src="{{ root_url(
+                                        $dart->cover.'/md'
+                                    ) }}"
+                                >
                                 </a>
                                 @endif
-                                <h3 class="text-center">
+                                <h3>
                                     <a href="#">
                                         {!! $dart->title() !!}
                                     </a>
                                 </h3>
-                                <hr>
                                 <div class="lead-text">
                                     {!! $dart->bodyFirstP() !!}
                                 </div>

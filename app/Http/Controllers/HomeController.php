@@ -16,7 +16,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $darts = Dart::all();
+        $darts = Dart::orderBy('created_at', 'desc')->get();
         return view('home', [
             'darts' => $darts,
         ]);
