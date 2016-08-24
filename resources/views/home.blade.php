@@ -13,12 +13,16 @@
     .dart-wrapper {
         padding: 8px;
     }
-    .dart {
+    .main-container .dart {
         position: relative;
         border: 1px solid rgba(0, 0, 0, .1);
         border-radius: 4px;
         background: white;
         padding: 16px;
+    }
+    .side .dart {
+        padding-bottom: 16px;
+        font-weight: 300;
     }
     .dart-cover, .dart-user-img {
         position: absolute;
@@ -31,10 +35,6 @@
         background-position: 50% 50%;
         background-repeat: no-repeat;
     }
-    /*.dart-cover {
-        width: 100%;
-        height: 156px;
-    }*/
     .dart-user-img {
         width: 32px;
         height: 32px;
@@ -76,58 +76,10 @@
         <div class="col-md-10 col-md-offset-1">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="row masonry-container">
-                        @foreach($darts as $dart)
-                        <div
-                            class="col-xs-12 dart-wrapper"
-                        >
-                            <div
-                                class="dart"
-                            >
-                                <div class="dart-header">
-                                    <div class="cell cell-img">
-                                        <div
-                                            class="dart-user-img"
-                                            style="background-image: url({{
-                                                $dart->user->img('xs')
-                                            }})"
-                                        ></div>
-                                    </div>
-                                    <div class="cell">
-                                        <div>
-                                            {{ $dart->user->name() }}
-                                            <span class="text-muted">in</span>
-                                            Technology
-                                        </div>
-                                        <div class="text-muted">
-                                            2 days ago
-                                            <span class="middotDivider"></span>
-                                            6 min read
-                                        </div>
-                                    </div>
-                                </div>
-                                @if(@$dart->cover)
-                                <a href="#">
-                                <img
-                                    class="dart-img"
-                                    src="{{ root_url(
-                                        $dart->cover.'/md'
-                                    ) }}"
-                                >
-                                </a>
-                                @endif
-                                <h3>
-                                    <a href="#">
-                                        {!! $dart->title() !!}
-                                    </a>
-                                </h3>
-                                <div class="lead-text">
-                                    {!! $dart->bodyFirstP() !!}
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
+                    @include('home.main')
+                </div>
+                <div class="col-md-4">
+                    @include('home.side')
                 </div>
             </div>
         </div>
