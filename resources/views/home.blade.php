@@ -67,6 +67,13 @@
         max-height: 186px;
         max-width: 100%;
     }
+
+    .group-side {
+        padding-bottom: 16px;
+    }
+    .invitation, .invitation h4 {
+        font-weight: 300;
+    }
 </style>
 @endsection
 

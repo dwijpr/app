@@ -1,4 +1,4 @@
-<div>
+<div class="group-side">
     <h4>Editor's pick</h4>
     <p>
         Stories worth talking about.
@@ -38,5 +38,22 @@
             }
             ?>
         @endforeach
+    </div>
+</div>
+<div class="invitation">
+    <div>
+        <h4>
+            Make Aqsa yours
+            <div class="pull-right">
+                <i class="fa fa-close"></i>
+            </div>
+        </h4>
+        <hr>
+        <p>
+            Anyone can write on Aqsa.
+        </p>
+        <a href="#" class="btn btn-default">
+            Start Writing
+        </a>
     </div>
 </div>
